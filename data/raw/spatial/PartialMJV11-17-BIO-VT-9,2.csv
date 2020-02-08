@@ -1,0 +1,990 @@
+﻿Object_ID,Observation,GPS,Waypoint,Latitude,Longitude,Date,Note_Taker,Team_Members,Camera_Phone,Picture_ID,Cover_Class,Average_Slope,Common_Name,Family,Genus_Species,Number,Total_Vascular_No_Grasses,Number_Unique,Abstract_Notes,Notebook_ID
+,"MJV11-19-BIO-VT-9,2-A1",3,516,35.236252,-115.795161,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Hedgehog cactus,Cactaceae,Echinocereus engelmannii,2,2,1,Green moss present and Rodent scat,13
+,"MJV11-19-BIO-VT-9,2-A1",3,516,35.236252,-115.795161,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,TNTC,2,1,Green moss present and Rodent scat,13
+,"MJV11-19-BIO-VT-9,2-A2",3,517,35.236253,-115.795106,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Saltbush,Chenopodiaceae,Atriplex polycarpa,1,2,2,,13
+,"MJV11-19-BIO-VT-9,2-A2",3,517,35.236253,-115.795106,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Barrel cactus,Cactaceae,Ferocactus cylindraceus,1,2,2,,13
+,"MJV11-19-BIO-VT-9,2-A2",3,517,35.236253,-115.795106,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Fine clump grass,Poaceae,Unk ,1,2,2,,13
+,"MJV11-19-BIO-VT-9,2-A2",3,517,35.236253,-115.795106,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,TNTC,2,2,,13
+,"MJV11-19-BIO-VT-9,2-A3",3,518,35.236267,-115.795044,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,TNTC,0,0,,13
+,"MJV11-19-BIO-VT-9,2-A3",3,518,35.236267,-115.795044,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Fine clump grass,Poaceae,Unk ,2,0,0,,13
+,"MJV11-19-BIO-VT-9,2-A3",3,518,35.236267,-115.795044,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Fuzzy top grass?,Poaceae,Unk ,2,0,0,,13
+,"MJV11-19-BIO-VT-9,2-A3",3,518,35.236267,-115.795044,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Seedlings,null,Too young to ID,2,0,0,,13
+,"MJV11-19-BIO-VT-9,2-A4",3,519,35.236239,-115.794982,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Saltbush,Chenopodiaceae,Atriplex polycarpa,2,2,1,,13
+,"MJV11-19-BIO-VT-9,2-A4",3,519,35.236239,-115.794982,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Fine clump grass,Poaceae,Unk ,4,2,1,,13
+,"MJV11-19-BIO-VT-9,2-A4",3,519,35.236239,-115.794982,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,TNTC,2,1,,13
+,"MJV11-19-BIO-VT-9,2-A4",3,519,35.236239,-115.794982,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Seedlings,null,Too young to ID,TNTC,2,1,,13
+,"MJV11-19-BIO-VT-9,2-A5",3,520,35.236240,-115.794921,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Saltbush,Chenopodiaceae,Atriplex polycarpa,1,4,3,,13
+,"MJV11-19-BIO-VT-9,2-A5",3,520,35.236240,-115.794921,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mojave Yucca,Agavaceae,Yucca schidigera,1,4,3,,13
+,"MJV11-19-BIO-VT-9,2-A5",3,520,35.236240,-115.794921,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Fuzzy top grass?,Poaceae,Unk ,5,4,3,,13
+,"MJV11-19-BIO-VT-9,2-A5",3,520,35.236240,-115.794921,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Spiny herb,Polygonaceae,Chorizanthe rigida,2,4,3,,13
+,"MJV11-19-BIO-VT-9,2-A5",3,520,35.236240,-115.794921,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Seedlings,null,Too young to ID,TNTC,4,3,,13
+,"MJV11-19-BIO-VT-9,2-A6",3,521,35.236257,-115.794885,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Mormon tea,Ephedraceae,Ephedra viridis,1,2,2,,13
+,"MJV11-19-BIO-VT-9,2-A6",3,521,35.236257,-115.794885,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Saltbush,Chenopodiaceae,Atriplex polycarpa,1,2,2,,13
+,"MJV11-19-BIO-VT-9,2-A6",3,521,35.236257,-115.794885,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Fine clump grass,Poaceae,Unk ,TNTC,2,2,,13
+,"MJV11-19-BIO-VT-9,2-A6",3,521,35.236257,-115.794885,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Fuzzy top grass?,Poaceae,Unk ,TNTC,2,2,,13
+,"MJV11-19-BIO-VT-9,2-A6",3,521,35.236257,-115.794885,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,TNTC,2,2,,13
+,"MJV11-19-BIO-VT-9,2-A6",3,521,35.236257,-115.794885,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Seedlings,null,Too young to ID,TNTC,2,2,,13
+,"MJV11-19-BIO-VT-9,2-A7",3,522,35.236254,-115.794826,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Saltbush,Chenopodiaceae,Atriplex polycarpa,3,3,1,,13
+,"MJV11-19-BIO-VT-9,2-A7",3,522,35.236254,-115.794826,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Fuzzy top grass?,Poaceae,Unk ,1,3,1,,13
+,"MJV11-19-BIO-VT-9,2-A7",3,522,35.236254,-115.794826,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Seedlings,null,Too young to ID,2,3,1,,13
+,"MJV11-19-BIO-VT-9,2-A8",3,523,35.236264,-115.794765,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Buckhorn cholla,Cactaceae,Cylindropuntia acanthocarpa,1,3,2,,13
+,"MJV11-19-BIO-VT-9,2-A8",3,523,35.236264,-115.794765,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Saltbush,Chenopodiaceae,Atriplex polycarpa,2,3,2,,13
+,"MJV11-19-BIO-VT-9,2-A8",3,523,35.236264,-115.794765,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Fine clump grass,Poaceae,Unk ,2,3,2,,13
+,"MJV11-19-BIO-VT-9,2-A8",3,523,35.236264,-115.794765,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Seedlings,null,Too young to ID,2,3,2,,13
+,"MJV11-19-BIO-VT-9,2-A9",3,524,35.236250,-115.794740,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Saltbush,Chenopodiaceae,Atriplex polycarpa,5,5,1,,13
+,"MJV11-19-BIO-VT-9,2-A9",3,524,35.236250,-115.794740,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Fine clump grass,Poaceae,Unk ,1,5,1,,13
+,"MJV11-19-BIO-VT-9,2-A9",3,524,35.236250,-115.794740,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Seedlings,null,Too young to ID,2,5,1,,13
+,"MJV11-19-BIO-VT-9,2-A10",3,525,35.236260,-115.794686,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Saltbush,Chenopodiaceae,Atriplex polycarpa,3,3,1,,13
+,"MJV11-19-BIO-VT-9,2-A10",3,525,35.236260,-115.794686,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Fine clump grass,Poaceae,Unk ,3,3,1,,13
+,"MJV11-19-BIO-VT-9,2-A10",3,525,35.236260,-115.794686,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Seedlings,null,Too young to ID,2,3,1,,13
+,"MJV11-19-BIO-VT-9,2-C1",3,526,35.236140,-115.795289,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Mormon tea,Ephedraceae,Ephedra viridis,1,4,3,,13
+,"MJV11-19-BIO-VT-9,2-C1",3,526,35.236140,-115.795289,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Hedgehog cactus,Cactaceae,Echinocereus engelmannii,1,4,3,,13
+,"MJV11-19-BIO-VT-9,2-C1",3,526,35.236140,-115.795289,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Spiky top grass,Poaceae,Unk ,2,4,3,,13
+,"MJV11-19-BIO-VT-9,2-C1",3,526,35.236140,-115.795289,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Spiny herb,Polygonaceae,Chorizanthe rigida,2,4,3,,13
+,"MJV11-19-BIO-VT-9,2-C1",3,526,35.236140,-115.795289,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Fuzzy top grass?,Poaceae,Unk ,2,4,3,,13
+,"MJV11-19-BIO-VT-9,2-C1",3,526,35.236140,-115.795289,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Seedlings,null,Too young to ID,2,4,3,,13
+,"MJV11-19-BIO-VT-9,2-C2",3,527,35.236098,-115.795235,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Buckhorn cholla,Cactaceae,Cylindropuntia acanthocarpa,1,2,2,,13
+,"MJV11-19-BIO-VT-9,2-C2",3,527,35.236098,-115.795235,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Hedgehog cactus,Cactaceae,Echinocereus engelmannii,1,2,2,,13
+,"MJV11-19-BIO-VT-9,2-C3",3,528,35.236103,-115.795326,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Hedgehog cactus,Cactaceae,Echinocereus engelmannii,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-C3",3,528,35.236103,-115.795326,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,White bursage,Asteraceae,Ambrosia dumosa,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-C3",3,528,35.236103,-115.795326,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Bladderpod,Cleomaceae,Peritoma arborea,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-C3",3,528,35.236103,-115.795326,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mulefat,Asteraceae,Baccharis salicina,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-C3",3,528,35.236103,-115.795326,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Low woollygrass,Poaceae,Dasyochloa pulchella,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-C3",3,528,35.236103,-115.795326,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Fuzzy top grass?,Poaceae,Unk ,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-C3",3,528,35.236103,-115.795326,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Fine clump grass,Poaceae,Unk ,5,4,4,,13
+,"MJV11-19-BIO-VT-9,2-C4",3,529,35.236109,-115.795359,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mormon tea,Ephedraceae,Ephedra viridis,1,3,3,Red ants present,13
+,"MJV11-19-BIO-VT-9,2-C4",3,529,35.236109,-115.795359,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Buckhorn cholla,Cactaceae,Cylindropuntia acanthocarpa,1,3,3,Red ants present,13
+,"MJV11-19-BIO-VT-9,2-C4",3,529,35.236109,-115.795359,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Hedgehog cactus,Cactaceae,Echinocereus engelmannii,1,3,3,Red ants present,13
+,"MJV11-19-BIO-VT-9,2-C4",3,529,35.236109,-115.795359,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Seedlings,null,Too young to ID,2,3,3,Red ants present,13
+,"MJV11-19-BIO-VT-9,2-C5",3,530,35.236126,-115.795385,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Desert trumpet,Polygonaceae,Eriogonum inflatum,1,2,2,,13
+,"MJV11-19-BIO-VT-9,2-C5",3,530,35.236126,-115.795385,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Mono groundsel,Asteraceae,Senecio flaccidus var. monoensis,1,2,2,,13
+,"MJV11-19-BIO-VT-9,2-C5",3,530,35.236126,-115.795385,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Fine clump grass,Poaceae,Unk ,10,2,2,,13
+,"MJV11-19-BIO-VT-9,2-C6",3,531,35.236138,-115.795435,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mulefat,Asteraceae,Baccharis salicina,1,1,1,,13
+,"MJV11-19-BIO-VT-9,2-C6",3,531,35.236138,-115.795435,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Fine clump grass,Poaceae,Unk ,1,1,1,,13
+,"MJV11-19-BIO-VT-9,2-C7",3,532,35.236170,-115.795494,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Desert trumpet,Polygonaceae,Eriogonum inflatum,3,6,3,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-C7",3,532,35.236170,-115.795494,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Mulefat,Asteraceae,Baccharis salicina,2,6,3,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-C7",3,532,35.236170,-115.795494,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Low woollygrass,Poaceae,Dasyochloa pulchella,1,6,3,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-C7",3,532,35.236170,-115.795494,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Seedlings,null,Too young to ID,2,6,3,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-C8",3,533,35.236187,-115.795572,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Unknown 3,Null,Null,1,9,5,,13
+,"MJV11-19-BIO-VT-9,2-C8",3,533,35.236187,-115.795572,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Bladderpod,Cleomaceae,Peritoma arborea,1,9,5,,13
+,"MJV11-19-BIO-VT-9,2-C8",3,533,35.236187,-115.795572,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mulefat,Asteraceae,Baccharis salicina,3,9,5,,13
+,"MJV11-19-BIO-VT-9,2-C8",3,533,35.236187,-115.795572,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mormon tea,Ephedraceae,Ephedra viridis,1,9,5,,13
+,"MJV11-19-BIO-VT-9,2-C8",3,533,35.236187,-115.795572,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Desert trumpet,Polygonaceae,Eriogonum inflatum,3,9,5,,13
+,"MJV11-19-BIO-VT-9,2-C8",3,533,35.236187,-115.795572,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Fine clump grass,Poaceae,Unk ,5,9,5,,13
+,"MJV11-19-BIO-VT-9,2-C8",3,533,35.236187,-115.795572,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Fuzzy top grass?,Poaceae,Unk ,2,9,5,,13
+,"MJV11-19-BIO-VT-9,2-C9",3,534,35.236193,-115.795568,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Hedgehog cactus,Cactaceae,Echinocereus engelmannii,1,7,3,,13
+,"MJV11-19-BIO-VT-9,2-C9",3,534,35.236193,-115.795568,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Mulefat,Asteraceae,Baccharis salicina,1,7,3,,13
+,"MJV11-19-BIO-VT-9,2-C9",3,534,35.236193,-115.795568,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Desert trumpet,Polygonaceae,Eriogonum inflatum,5,7,3,,13
+,"MJV11-19-BIO-VT-9,2-C9",3,534,35.236193,-115.795568,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Fine clump grass,Poaceae,Unk ,1,7,3,,13
+,"MJV11-19-BIO-VT-9,2-C9",3,534,35.236193,-115.795568,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,1,7,3,,13
+,"MJV11-19-BIO-VT-9,2-C9",3,534,35.236193,-115.795568,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Fuzzy top grass?,Poaceae,Unk ,1,7,3,,13
+,"MJV11-19-BIO-VT-9,2-C9",3,534,35.236193,-115.795568,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Spiky top grass,Poaceae,Unk ,1,7,3,,13
+,"MJV11-19-BIO-VT-9,2-C10",3,535,35.236198,-115.795588,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,25,Hole-in-the-sand plant,Asteraceae,Nicolletia occidentalis,2,4,3,,13
+,"MJV11-19-BIO-VT-9,2-C10",3,535,35.236198,-115.795588,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,25,Bladderpod,Cleomaceae,Peritoma arborea,1,4,3,,13
+,"MJV11-19-BIO-VT-9,2-C10",3,535,35.236198,-115.795588,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,25,Mojave Yucca,Agavaceae,Yucca schidigera,1,4,3,,13
+,"MJV11-19-BIO-VT-9,2-C10",3,535,35.236198,-115.795588,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,25,Red brome,Poaceae,Bromus madritensis ssp. Rubens,3,4,3,,13
+,"MJV11-19-BIO-VT-9,2-C10",3,535,35.236198,-115.795588,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,25,Fine clump grass,Poaceae,Unk ,8,4,3,,13
+,"MJV11-19-BIO-VT-9,2-E1",3,536,35.235915,-115.795232,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,45,White bursage,Asteraceae,Ambrosia dumosa,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-E1",3,536,35.235915,-115.795232,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,45,Beavertail cactus,Cactaceae,Opuntia basilaris,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-E1",3,536,35.235915,-115.795232,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,45,Mono groundsel,Asteraceae,Senecio flaccidus var. monoensis,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-E1",3,536,35.235915,-115.795232,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,45,Red brome,Poaceae,Bromus madritensis ssp. Rubens,5,3,3,,13
+,"MJV11-19-BIO-VT-9,2-E1",3,536,35.235915,-115.795232,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,45,Fine clump grass,Poaceae,Unk ,2,3,3,,13
+,"MJV11-19-BIO-VT-9,2-E1",3,536,35.235915,-115.795232,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,45,Seedlings,null,Too young to ID,2,3,3,,13
+,"MJV11-19-BIO-VT-9,2-E2",3,537,35.235914,-115.795197,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,45,Bladderpod,Cleomaceae,Peritoma arborea,1,4,3,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-E2",3,537,35.235914,-115.795197,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,45,Mormon tea,Ephedraceae,Ephedra viridis,2,4,3,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-E2",3,537,35.235914,-115.795197,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,45,Mono groundsel,Asteraceae,Senecio flaccidus var. monoensis,1,4,3,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-E2",3,537,35.235914,-115.795197,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,45,Red brome,Poaceae,Bromus madritensis ssp. Rubens,TNTC,4,3,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-E3",3,538,35.235875,-115.795134,1/18/17,Sarah,Takuma/Sarah,Sheila,,Granite boulders,,Mormon tea,Ephedraceae,Ephedra viridis,1,3,3,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-E3",3,538,35.235875,-115.795134,1/18/17,Sarah,Takuma/Sarah,Sheila,,Granite boulders,,Barrel cactus,Cactaceae,Ferocactus cylindraceus,1,3,3,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-E3",3,538,35.235875,-115.795134,1/18/17,Sarah,Takuma/Sarah,Sheila,,Granite boulders,,Mono groundsel,Asteraceae,Senecio flaccidus var. monoensis,1,3,3,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-E3",3,538,35.235875,-115.795134,1/18/17,Sarah,Takuma/Sarah,Sheila,,Granite boulders,,Fine clump grass,Poaceae,Unk ,TNTC,3,3,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-E3",3,538,35.235875,-115.795134,1/18/17,Sarah,Takuma/Sarah,Sheila,,Granite boulders,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,TNTC,3,3,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-E4",3,539,35.235878,-115.795121,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,25,Mojave Yucca,Agavaceae,Yucca schidigera,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E4",3,539,35.235878,-115.795121,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,25,Mulefat,Asteraceae,Baccharis salicina,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E4",3,539,35.235878,-115.795121,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,25,Mormon tea,Ephedraceae,Ephedra viridis,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E4",3,539,35.235878,-115.795121,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,25,Fine clump grass,Poaceae,Unk ,TNTC,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E4",3,539,35.235878,-115.795121,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,25,Spiky top grass,Poaceae,Unk ,4,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E4",3,539,35.235878,-115.795121,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,25,Desert trumpet,Polygonaceae,Eriogonum inflatum,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E5",3,540,35.235873,-115.795026,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Mormon tea,Ephedraceae,Ephedra viridis,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E5",3,540,35.235873,-115.795026,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Mojave Yucca,Agavaceae,Yucca schidigera,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E5",3,540,35.235873,-115.795026,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Barrel cactus,Cactaceae,Ferocactus cylindraceus,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E5",3,540,35.235873,-115.795026,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Pencil cholla,Cactaceae,Cylindropuntia ramosissima,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E5",3,540,35.235873,-115.795026,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,5,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E5",3,540,35.235873,-115.795026,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Fuzzy top grass?,Poaceae,Unk ,4,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E5",3,540,35.235873,-115.795026,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Fine clump grass,Poaceae,Unk ,3,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E5",3,540,35.235873,-115.795026,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Spiky top grass,Poaceae,Unk ,4,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E6",3,541,35.235864,-115.794962,1/18/17,Sarah,Takuma/Sarah,Sheila,,Sand,,Desert trumpet,Polygonaceae,Eriogonum inflatum,3,3,1,,13
+,"MJV11-19-BIO-VT-9,2-E6",3,541,35.235864,-115.794962,1/18/17,Sarah,Takuma/Sarah,Sheila,,Sand,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,TNTC,3,1,,13
+,"MJV11-19-BIO-VT-9,2-E7",3,542,35.235858,-115.794906,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,California cholla,Cactaceae,Cylindropuntia californica,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E7",3,542,35.235858,-115.794906,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Desert trumpet,Polygonaceae,Eriogonum inflatum,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E7",3,542,35.235858,-115.794906,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Bladderpod,Cleomaceae,Peritoma arborea,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E7",3,542,35.235858,-115.794906,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mulefat,Asteraceae,Baccharis salicina,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E7",3,542,35.235858,-115.794906,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Fine clump grass,Poaceae,Unk ,5,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E7",3,542,35.235858,-115.794906,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,TNTC,4,4,,13
+,"MJV11-19-BIO-VT-9,2-E8",3,543,35.235876,-115.794837,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Desert trumpet,Polygonaceae,Eriogonum inflatum,2,3,2,Lavender lichen,13
+,"MJV11-19-BIO-VT-9,2-E8",3,543,35.235876,-115.794837,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Mormon tea,Ephedraceae,Ephedra viridis,1,3,2,Lavender lichen,13
+,"MJV11-19-BIO-VT-9,2-E8",3,543,35.235876,-115.794837,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,5,3,2,Lavender lichen,13
+,"MJV11-19-BIO-VT-9,2-E9",3,544,35.235873,-115.794773,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mulefat,Asteraceae,Baccharis salicina,2,5,4,Soil crusts present,13
+,"MJV11-19-BIO-VT-9,2-E9",3,544,35.235873,-115.794773,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Buckhorn cholla,Cactaceae,Cylindropuntia acanthocarpa,1,5,4,Soil crusts present,13
+,"MJV11-19-BIO-VT-9,2-E9",3,544,35.235873,-115.794773,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mono groundsel,Asteraceae,Senecio flaccidus var. monoensis,1,5,4,Soil crusts present,13
+,"MJV11-19-BIO-VT-9,2-E9",3,544,35.235873,-115.794773,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mormon tea,Ephedraceae,Ephedra viridis,1,5,4,Soil crusts present,13
+,"MJV11-19-BIO-VT-9,2-E10",3,545,35.235900,-115.794714,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mono groundsel,Asteraceae,Senecio flaccidus var. monoensis,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-E10",3,545,35.235900,-115.794714,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Hedgehog cactus,Cactaceae,Echinocereus engelmannii,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-E10",3,545,35.235900,-115.794714,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mulefat,Asteraceae,Baccharis salicina,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-G1",3,546,35.235670,-115.795260,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mormon tea,Ephedraceae,Ephedra viridis,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-G1",3,546,35.235670,-115.795260,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Bladderpod,Cleomaceae,Peritoma arborea,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-G1",3,546,35.235670,-115.795260,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Hedgehog cactus,Cactaceae,Echinocereus engelmannii,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-G1",3,546,35.235670,-115.795260,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Fine clump grass,Poaceae,Unk ,TNTC,3,3,,13
+,"MJV11-19-BIO-VT-9,2-G1",3,546,35.235670,-115.795260,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,TNTC,3,3,,13
+,"MJV11-19-BIO-VT-9,2-G1",3,546,35.235670,-115.795260,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Spiky top grass,Poaceae,Unk ,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-G2",3,547,35.235704,-115.795391,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Spiny herb,Polygonaceae,Chorizanthe rigida,9,10,2,,13
+,"MJV11-19-BIO-VT-9,2-G2",3,547,35.235704,-115.795391,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Desert trumpet,Polygonaceae,Eriogonum inflatum,1,10,2,,13
+,"MJV11-19-BIO-VT-9,2-G2",3,547,35.235704,-115.795391,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,TNTC,10,2,,13
+,"MJV11-19-BIO-VT-9,2-G2",3,547,35.235704,-115.795391,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Fine clump grass,Poaceae,Unk ,TNTC,10,2,,13
+,"MJV11-19-BIO-VT-9,2-G2",3,547,35.235704,-115.795391,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Seedlings,null,Too young to ID,3,10,2,,13
+,"MJV11-19-BIO-VT-9,2-G3",3,548,35.235708,-115.795382,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Anderson Thornbush,Solanaceae,Lycium andersonii,1,2,2,,13
+,"MJV11-19-BIO-VT-9,2-G3",3,548,35.235708,-115.795382,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Mormon tea,Ephedraceae,Ephedra viridis,1,2,2,,13
+,"MJV11-19-BIO-VT-9,2-G3",3,548,35.235708,-115.795382,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Fine clump grass,Poaceae,Unk ,12,2,2,,13
+,"MJV11-19-BIO-VT-9,2-G4",3,549,35.235741,-115.795470,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Mormon tea,Ephedraceae,Ephedra viridis,1,3,2,,13
+,"MJV11-19-BIO-VT-9,2-G4",3,549,35.235741,-115.795470,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Creosote,Zygophyllaceae,Larrea tridentata,2,3,2,,13
+,"MJV11-19-BIO-VT-9,2-G4",3,549,35.235741,-115.795470,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Fine clump grass,Poaceae,Unk ,TNTC,3,2,,13
+,"MJV11-19-BIO-VT-9,2-G5",3,550,35.235746,-115.795549,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Creosote,Zygophyllaceae,Larrea tridentata,1,2,2,,13
+,"MJV11-19-BIO-VT-9,2-G5",3,550,35.235746,-115.795549,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Mormon tea,Ephedraceae,Ephedra viridis,1,2,2,,13
+,"MJV11-19-BIO-VT-9,2-G5",3,550,35.235746,-115.795549,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Fine clump grass,Poaceae,Unk ,3,2,2,,13
+,"MJV11-19-BIO-VT-9,2-G5",3,550,35.235746,-115.795549,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Seedlings,null,Too young to ID,3,2,2,,13
+,"MJV11-19-BIO-VT-9,2-G6",3,551,35.235768,-115.795588,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,California cholla,Cactaceae,Cylindropuntia californica,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-G6",3,551,35.235768,-115.795588,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Pencil cholla,Cactaceae,Cylindropuntia ramosissima,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-G6",3,551,35.235768,-115.795588,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Barrel cactus,Cactaceae,Ferocactus cylindraceus,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-G6",3,551,35.235768,-115.795588,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Globe mallow,Malvaceae,Sphaeralcea ambigua,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-G7",3,552,35.235843,-115.795809,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,White bursage,Asteraceae,Ambrosia dumosa,1,4,3,,13
+,"MJV11-19-BIO-VT-9,2-G7",3,552,35.235843,-115.795809,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Desert trumpet,Polygonaceae,Eriogonum inflatum,2,4,3,,13
+,"MJV11-19-BIO-VT-9,2-G7",3,552,35.235843,-115.795809,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Mojave Yucca,Agavaceae,Yucca schidigera,1,4,3,,13
+,"MJV11-19-BIO-VT-9,2-G7",3,552,35.235843,-115.795809,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Fine clump grass,Poaceae,Unk ,10,4,3,,13
+,"MJV11-19-BIO-VT-9,2-G8",3,553,35.235813,-115.795670,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Creosote,Zygophyllaceae,Larrea tridentata,1,6,5,,13
+,"MJV11-19-BIO-VT-9,2-G8",3,553,35.235813,-115.795670,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Barrel cactus,Cactaceae,Ferocactus cylindraceus,1,6,5,,13
+,"MJV11-19-BIO-VT-9,2-G8",3,553,35.235813,-115.795670,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mojave Yucca,Agavaceae,Yucca schidigera,1,6,5,,13
+,"MJV11-19-BIO-VT-9,2-G8",3,553,35.235813,-115.795670,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Desert trumpet,Polygonaceae,Eriogonum inflatum,2,6,5,,13
+,"MJV11-19-BIO-VT-9,2-G8",3,553,35.235813,-115.795670,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mormon tea,Ephedraceae,Ephedra viridis,1,6,5,,13
+,"MJV11-19-BIO-VT-9,2-G8",3,553,35.235813,-115.795670,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Fine clump grass,Poaceae,Unk ,TNTC,6,5,,13
+,"MJV11-19-BIO-VT-9,2-G9",3,554,35.235812,-115.795762,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Buckhorn cholla,Cactaceae,Cylindropuntia acanthocarpa,2,5,4,,13
+,"MJV11-19-BIO-VT-9,2-G9",3,554,35.235812,-115.795762,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Mojave Yucca,Agavaceae,Yucca schidigera,1,5,4,,13
+,"MJV11-19-BIO-VT-9,2-G9",3,554,35.235812,-115.795762,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Desert trumpet,Polygonaceae,Eriogonum inflatum,1,5,4,,13
+,"MJV11-19-BIO-VT-9,2-G9",3,554,35.235812,-115.795762,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Saltbush,Chenopodiaceae,Atriplex polycarpa,1,5,4,,13
+,"MJV11-19-BIO-VT-9,2-G9",3,554,35.235812,-115.795762,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,6,5,4,,13
+,"MJV11-19-BIO-VT-9,2-G10",3,555,35.235836,-115.795805,1/18/17,Sarah,Takuma/Sarah,Sheila,,Granite boulders,,Teddybear cholla,Cactaceae,Cylindropuntia bigelovii,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-G10",3,555,35.235836,-115.795805,1/18/17,Sarah,Takuma/Sarah,Sheila,,Granite boulders,,Mormon tea,Ephedraceae,Ephedra viridis,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-G10",3,555,35.235836,-115.795805,1/18/17,Sarah,Takuma/Sarah,Sheila,,Granite boulders,,Hedgehog cactus,Cactaceae,Echinocereus engelmannii,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-G10",3,555,35.235836,-115.795805,1/18/17,Sarah,Takuma/Sarah,Sheila,,Granite boulders,,Fine clump grass,Poaceae,Unk ,5,3,3,,13
+,"MJV11-19-BIO-VT-9,2-I1",3,556,35.235484,-115.795306,1/18/17,Sarah,Takuma/Sarah,Sheila,,Granite boulders,,California buckwheat,Polygonaceae,Eriogonum fasciculatum,4,5,2,,13
+,"MJV11-19-BIO-VT-9,2-I1",3,556,35.235484,-115.795306,1/18/17,Sarah,Takuma/Sarah,Sheila,,Granite boulders,,Mulefat,Asteraceae,Baccharis salicina,1,5,2,,13
+,"MJV11-19-BIO-VT-9,2-I1",3,556,35.235484,-115.795306,1/18/17,Sarah,Takuma/Sarah,Sheila,,Granite boulders,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,TNTC,5,2,,13
+,"MJV11-19-BIO-VT-9,2-I2",3,557,35.235510,-115.795192,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Goldenhead,Asteraceae,Acamptopappus sphaerocephalus,1,9,7,,13
+,"MJV11-19-BIO-VT-9,2-I2",3,557,35.235510,-115.795192,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mono groundsel,Asteraceae,Senecio flaccidus var. monoensis,2,9,7,,13
+,"MJV11-19-BIO-VT-9,2-I2",3,557,35.235510,-115.795192,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Heliotrope,Boraginaceae,Heliotropium curassavicum,1,9,7,,13
+,"MJV11-19-BIO-VT-9,2-I2",3,557,35.235510,-115.795192,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Barrel cactus,Cactaceae,Ferocactus cylindraceus,1,9,7,,13
+,"MJV11-19-BIO-VT-9,2-I2",3,557,35.235510,-115.795192,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Low woollygrass,Poaceae,Dasyochloa pulchella,2,9,7,,13
+,"MJV11-19-BIO-VT-9,2-I2",3,557,35.235510,-115.795192,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mulefat,Asteraceae,Baccharis salicina,1,9,7,,13
+,"MJV11-19-BIO-VT-9,2-I2",3,557,35.235510,-115.795192,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Globe mallow,Malvaceae,Sphaeralcea ambigua,1,9,7,,13
+,"MJV11-19-BIO-VT-9,2-I2",3,557,35.235510,-115.795192,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,TNTC,9,7,,13
+,"MJV11-19-BIO-VT-9,2-I2",3,557,35.235510,-115.795192,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Seedlings,null,Too young to ID,1,9,7,,13
+,"MJV11-19-BIO-VT-9,2-I3",3,558,35.235503,-115.795204,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Creosote,Zygophyllaceae,Larrea tridentata,1,7,7,,13
+,"MJV11-19-BIO-VT-9,2-I3",3,558,35.235503,-115.795204,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Catclaw,Fabaceae,Senegalia greggii,1,7,7,,13
+,"MJV11-19-BIO-VT-9,2-I3",3,558,35.235503,-115.795204,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Desert mistletoe,Viscaceae,Phoradendron californicum,1,7,7,,13
+,"MJV11-19-BIO-VT-9,2-I3",3,558,35.235503,-115.795204,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Heliotrope,Boraginaceae,Heliotropium curassavicum,1,7,7,,13
+,"MJV11-19-BIO-VT-9,2-I3",3,558,35.235503,-115.795204,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Globe mallow,Malvaceae,Sphaeralcea ambigua,1,7,7,,13
+,"MJV11-19-BIO-VT-9,2-I3",3,558,35.235503,-115.795204,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Low woollygrass,Poaceae,Dasyochloa pulchella,1,7,7,,13
+,"MJV11-19-BIO-VT-9,2-I3",3,558,35.235503,-115.795204,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Mulefat,Asteraceae,Baccharis salicina,1,7,7,,13
+,"MJV11-19-BIO-VT-9,2-I3",3,558,35.235503,-115.795204,1/18/17,Sarah,Takuma/Sarah,Sheila,,Gravel,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,5,7,7,,13
+,"MJV11-19-BIO-VT-9,2-I4",3,559,35.235497,-115.795142,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Mulefat,Asteraceae,Baccharis salicina,1,5,4,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-I4",3,559,35.235497,-115.795142,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,California buckwheat,Polygonaceae,Eriogonum fasciculatum,2,5,4,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-I4",3,559,35.235497,-115.795142,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Goldenhead,Asteraceae,Acamptopappus sphaerocephalus,1,5,4,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-I4",3,559,35.235497,-115.795142,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Globe mallow,Malvaceae,Sphaeralcea ambigua,1,5,4,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-I4",3,559,35.235497,-115.795142,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,TNTC,5,4,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-I4",3,559,35.235497,-115.795142,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Seedlings,null,Too young to ID,3,5,4,Green moss present,13
+,"MJV11-19-BIO-VT-9,2-I5",3,560,35.235507,-115.795103,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Mono groundsel,Asteraceae,Senecio flaccidus var. monoensis,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-I5",3,560,35.235507,-115.795103,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Buckhorn cholla,Cactaceae,Cylindropuntia acanthocarpa,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-I5",3,560,35.235507,-115.795103,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Pencil cholla,Cactaceae,Cylindropuntia ramosissima,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-I5",3,560,35.235507,-115.795103,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Mulefat,Asteraceae,Baccharis salicina,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-I5",3,560,35.235507,-115.795103,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,TNTC,4,4,,13
+,"MJV11-19-BIO-VT-9,2-I6",3,561,35.235501,-115.795058,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mono groundsel,Asteraceae,Senecio flaccidus var. monoensis,1,4,3,,13
+,"MJV11-19-BIO-VT-9,2-I6",3,561,35.235501,-115.795058,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mulefat,Asteraceae,Baccharis salicina,1,4,3,,13
+,"MJV11-19-BIO-VT-9,2-I6",3,561,35.235501,-115.795058,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,California buckwheat,Polygonaceae,Eriogonum fasciculatum,2,4,3,,13
+,"MJV11-19-BIO-VT-9,2-I6",3,561,35.235501,-115.795058,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,TNTC,4,3,,13
+,"MJV11-19-BIO-VT-9,2-I6",3,561,35.235501,-115.795058,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Fine clump grass,Poaceae,Unk ,TNTC,4,3,,13
+,"MJV11-19-BIO-VT-9,2-I7",3,562,35.235495,-115.794987,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,California buckwheat,Polygonaceae,Eriogonum fasciculatum,3,4,2,,13
+,"MJV11-19-BIO-VT-9,2-I7",3,562,35.235495,-115.794987,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Mojave Yucca,Agavaceae,Yucca schidigera,1,4,2,,13
+,"MJV11-19-BIO-VT-9,2-I7",3,562,35.235495,-115.794987,1/18/17,Sarah,Takuma/Sarah,Sheila,,live plant,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,TNTC,4,2,,13
+,"MJV11-19-BIO-VT-9,2-I8",3,562,35.235495,-115.794987,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Brittlebush,Asteraceae,Encelia farinosa,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-I8",3,563,35.235468,-115.794942,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Barrel cactus,Cactaceae,Ferocactus cylindraceus,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-I8",3,563,35.235468,-115.794942,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Mormon tea,Ephedraceae,Ephedra viridis,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-I8",3,563,35.235468,-115.794942,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,12,3,3,,13
+,"MJV11-19-BIO-VT-9,2-I9",3,564,35.235480,-115.794867,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,35,White bursage,Asteraceae,Ambrosia dumosa,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-I9",3,564,35.235480,-115.794867,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,35,Barrel cactus,Cactaceae,Ferocactus cylindraceus,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-I9",3,564,35.235480,-115.794867,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,35,Hedgehog cactus,Cactaceae,Echinocereus engelmannii,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-I9",3,564,35.235480,-115.794867,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,35,Mojave Yucca,Agavaceae,Yucca schidigera,1,4,4,,13
+,"MJV11-19-BIO-VT-9,2-I9",3,564,35.235480,-115.794867,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,35,Red brome,Poaceae,Bromus madritensis ssp. Rubens,12,4,4,,13
+,"MJV11-19-BIO-VT-9,2-I10",3,565,35.235498,-115.794789,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,25,Anderson Thornbush,Solanaceae,Lycium andersonii,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-I10",3,565,35.235498,-115.794789,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,25,Globe mallow,Malvaceae,Sphaeralcea ambigua,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-I10",3,565,35.235498,-115.794789,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,25,Mormon tea,Ephedraceae,Ephedra viridis,1,3,3,,13
+,"MJV11-19-BIO-VT-9,2-I10",3,565,35.235498,-115.794789,1/18/17,Sarah,Takuma/Sarah,Sheila,,Basalt,25,Red brome,Poaceae,Bromus madritensis ssp. Rubens,20,3,3,,13
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,
+,,,,,,,,,,,,,,#N/A,#N/A,,,,,

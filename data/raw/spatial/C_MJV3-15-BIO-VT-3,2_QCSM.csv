@@ -1,0 +1,121 @@
+﻿Object_ID,Observation,GPS,Waypoint,Latitude,Longitude,Date,Note_Taker,Team_Members,Camera_Phone,Picture_ID,Cover_Class,Average_Slope,Common_Name,Family,Genus_Species,Number,Total_Vascular_No_Grasses,Number_Unique,Abstract_Notes,Notebook_ID
+1,"MJV3-15-BIO-VT-3,2-5A",1,43,35.235914,-115.801881,3/16/15,,Espericueta/Reyes,,"MJV3-15-BIO-VT-3,2-5A",Sand,,Forget me not,Boraginaceae,Cryptantha angustifolia,1,3,3,,5
+2,"MJV3-15-BIO-VT-3,2-5A",1,43,35.235914,-115.801881,3/16/15,,Espericueta/Reyes,,"3,4",Sand,,Bladderpod,Cleomaceae,Peritoma arborea,1,3,3,,5
+3,"MJV3-15-BIO-VT-3,2-5A",1,43,35.235914,-115.801881,3/16/15,,Espericueta/Reyes,,"3,4",Sand,,grass,Poaceae,grass,1,3,3,,5
+4,"MJV3-15-BIO-VT-3,2-5B",1,44,35.235962,-115.801853,3/16/15,,Espericueta/Reyes,,"5,6",Plant,,Bladderpod,Cleomaceae,Peritoma arborea,1,4,4,,5
+5,"MJV3-15-BIO-VT-3,2-5B",1,44,35.235962,-115.801853,3/16/15,,Espericueta/Reyes,,"5,6",Plant,,"Palmate stem, axial palmate, long serrated leaves",,Unknown 20B,1,4,4,,5
+6,"MJV3-15-BIO-VT-3,2-5B",1,44,35.235962,-115.801853,3/16/15,,Espericueta/Reyes,,"5,6",Plant,,Anderson thornbush,Solanaceae,Lycium andersonii,1,4,4,,5
+7,"MJV3-15-BIO-VT-3,2-5B",1,44,35.235962,-115.801853,3/16/15,,Espericueta/Reyes,,"5,6",Plant,,Grass,Poaceae,grasses,1,4,4,,5
+8,"MJV3-15-BIO-VT-3,2-5C",1,45,35.236036,-115.801880,3/16/15,,Espericueta/Reyes,,"7,8",Plant,,Creosote,Zygophyllaceae,Larrea tridentata,1,35,4,,5
+9,"MJV3-15-BIO-VT-3,2-5C",1,45,35.236036,-115.801880,3/16/15,,Espericueta/Reyes,,"7,8",Plant,,Desert Teddy Bear Cholla,Cactaceae,Optunia bigelovii,5,35,4,,5
+10,"MJV3-15-BIO-VT-3,2-5C",1,45,35.236036,-115.801880,3/16/15,,Espericueta/Reyes,,"7,8",Plant,,Grass,Poaceae,grass,20,35,4,,5
+11,"MJV3-15-BIO-VT-3,2-5C",1,45,35.236036,-115.801880,3/16/15,,Espericueta/Reyes,,"7,8",Plant,,Unknown 7B,,Unknown 7B,8,35,4,,5
+12,"MJV3-15-BIO-VT-3,2-5D",1,46,35.236108,-115.801878,3/16/15,,Espericueta/Reyes,,"9,10",Gravel,,Unknown 7B,,Unknown 7B,1,3,2,,5
+13,"MJV3-15-BIO-VT-3,2-5D",1,46,35.236108,-115.801878,3/16/15,,Espericueta/Reyes,,"9,10",Gravel,,Bladderpod,Cleomaceae,Peritoma arborea,2,3,2,,5
+14,"MJV3-15-BIO-VT-3,2-5E",1,47,35.236167,-115.801883,3/16/15,,Espericueta/Reyes,,"11,12",Rock,,,,Unknown 7B,1,18,4,,5
+15,"MJV3-15-BIO-VT-3,2-5E",1,47,35.236167,-115.801883,3/16/15,,Espericueta/Reyes,,"11,12",Rock,,Bladderpod,Cleomaceae,Peritoma arborea,1,18,4,,5
+16,"MJV3-15-BIO-VT-3,2-5E",1,47,35.236167,-115.801883,3/16/15,,Espericueta/Reyes,,"11,12",Rock,,Desert Teddy Bear Cholla,Cactaceae,Optunia bigelovii,1,18,4,,5
+17,"MJV3-15-BIO-VT-3,2-5E",1,47,35.236167,-115.801883,3/16/15,,Espericueta/Reyes,,"11,12",Rock,,Grass,Poaceae,grass,15,18,4,,5
+18,"MJV3-15-BIO-VT-3,2-5F",1,48,35.235828,-115.801877,3/16/15,,Espericueta/Reyes,,"13,14",Gravel,,Asteraceae family,,Unknown 6B,6,13,3,,5
+19,"MJV3-15-BIO-VT-3,2-5F",1,48,35.235828,-115.801877,3/16/15,,Espericueta/Reyes,,"13,14",Gravel,,"Red stemmed, filagree, Cranesbill?",,Unknown 13B,6,13,3,,5
+20,"MJV3-15-BIO-VT-3,2-5F",1,48,35.235828,-115.801877,3/16/15,,Espericueta/Reyes,,"13,14",Gravel,,Grass,Poaceae,Grass,1,13,3,,5
+21,"MJV3-15-BIO-VT-3,2-6A",1,49,35.235847,-115.801764,3/16/15,,Espericueta/Reyes,,"15,16",Gravel,,"Red stemmed, filagree, Cranesbill?",,Unknown 13B,2,15,3,,5
+22,"MJV3-15-BIO-VT-3,2-6A",1,49,35.235847,-115.801764,3/16/15,,Espericueta/Reyes,,"15,16",Gravel,,,,Unknown 6B,3,15,3,,5
+23,"MJV3-15-BIO-VT-3,2-6A",1,49,35.235847,-115.801764,3/16/15,,Espericueta/Reyes,,"15,16",Gravel,,Forget me not,Boraginaceae,Cryptantha angustifolia,10,15,3,,5
+24,"MJV3-15-BIO-VT-3,2-6B",1,50,35.235801,-115.801756,3/16/15,,Espericueta/Reyes,,17-19,Rock,,,,Unknown 13B,4,12,4,,5
+25,"MJV3-15-BIO-VT-3,2-6B",1,50,35.235801,-115.801756,3/16/15,,Espericueta/Reyes,,17-19,Rock,,"Senna? Alternating leaves, yellow flower w/pod. 1 stalk, 1 tap root",,Unknown 20B,6,12,4,,5
+26,"MJV3-15-BIO-VT-3,2-6B",1,50,35.235801,-115.801756,3/16/15,,Espericueta/Reyes,,17-19,Rock,,Teddy Bear Cholla,Cactaceae,Optunia bigelovii,1,12,4,,5
+27,"MJV3-15-BIO-VT-3,2-6B",1,50,35.235801,-115.801756,3/16/15,,Espericueta/Reyes,,17-19,Rock,,,,Grass,1,12,4,,5
+28,"MJV3-15-BIO-VT-3,2-6C",1,52,35.235767,-115.801756,3/16/15,,Espericueta/Reyes,,20-22,Gravel,,,,Unknown 13B,5,11,5,,5
+29,"MJV3-15-BIO-VT-3,2-6C",1,52,35.235767,-115.801756,3/16/15,,Espericueta/Reyes,,20-22,Gravel,,,,Unknown 6B,3,11,5,,5
+30,"MJV3-15-BIO-VT-3,2-6C",1,52,35.235767,-115.801756,3/16/15,,Espericueta/Reyes,,20-22,Gravel,,Desert Star Daisy,Asteraceae,Monoptilon bellidiforme,1,11,5,,5
+31,"MJV3-15-BIO-VT-3,2-6C",1,52,35.235767,-115.801756,3/16/15,,Espericueta/Reyes,,20-22,Gravel,,Forget me not,Boraginaceae,Cryptantha angustifolia,1,11,5,,5
+32,"MJV3-15-BIO-VT-3,2-6C",1,52,35.235767,-115.801756,3/16/15,,Espericueta/Reyes,,20-22,Gravel,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,1,11,5,,5
+33,"MJV3-15-BIO-VT-3,2-6D",1,51,35.235716,-115.801772,3/16/15,,Espericueta/Reyes,,"23,24",,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,20,21,2,,5
+34,"MJV3-15-BIO-VT-3,2-6D",1,51,35.235716,-115.801772,3/16/15,,Espericueta/Reyes,,"23,24",,,Mormon tea,Ephedraceae,Ephedra viridis,1,21,2,,5
+35,"MJV3-15-BIO-VT-3,2-2A",1,53,35.235790,-115.802269,3/16/15,,Espericueta/Reyes,,"25,26",Dirt,,grass,Poaceae,grass,10,13,4,,5
+36,"MJV3-15-BIO-VT-3,2-2A",1,53,35.235790,-115.802269,3/16/15,,Espericueta/Reyes,,"25,26",Dirt,,Forget me not,Boraginaceae,Cryptantha angustifolia,1,13,4,,5
+37,"MJV3-15-BIO-VT-3,2-2A",1,53,35.235790,-115.802269,3/16/15,,Espericueta/Reyes,,"25,26",Dirt,,,,Unknown 13B,1,13,4,,5
+38,"MJV3-15-BIO-VT-3,2-2A",1,53,35.235790,-115.802269,3/16/15,,Espericueta/Reyes,,"25,26",Dirt,,Teddy Bear Cholla,Cactaceae,Optunia bigelovii,1,13,4,,5
+39,"MJV3-15-BIO-VT-3,2-2B",1,54,35.235748,-115.802272,3/16/15,,Espericueta/Reyes,,27-29,Rock,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,15,17,3,,5
+40,"MJV3-15-BIO-VT-3,2-2B",1,54,35.235748,-115.802272,3/16/15,,Espericueta/Reyes,,27-29,Rock,,,,Unknown 17B,1,17,3,,5
+41,"MJV3-15-BIO-VT-3,2-2B",1,54,35.235748,-115.802272,3/16/15,,Espericueta/Reyes,,27-29,Rock,,,,Unknown 13B,1,17,3,,5
+42,"MJV3-15-BIO-VT-3,2-2C",1,55,35.235675,-115.802243,3/16/15,,Espericueta/Reyes,,"30,31",Rock,,Mormon tea,Ephedraceae,Ephedra viridis,2,17,4,,5
+43,"MJV3-15-BIO-VT-3,2-2C",1,55,35.235675,-115.802243,3/16/15,,Espericueta/Reyes,,"30,31",Rock,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,13,17,4,,5
+44,"MJV3-15-BIO-VT-3,2-2C",1,55,35.235675,-115.802243,3/16/15,,Espericueta/Reyes,,"30,31",Rock,,non vascular,,Bryophyte,1,17,4,,5
+45,"MJV3-15-BIO-VT-3,2-2C",1,55,35.235675,-115.802243,3/16/15,,Espericueta/Reyes,,"30,31",Rock,,,,Unknown 13B,2,17,4,,5
+46,"MJV3-15-BIO-VT-3,2-2D",1,56,35.235630,-115.802211,3/16/15,,Espericueta/Reyes,,"32,33",Dirt,,non vascular,,Bryophyte,1,1,2,,5
+47,"MJV3-15-BIO-VT-3,2-2D",1,56,35.235630,-115.802211,3/16/15,,Espericueta/Reyes,,"32,33",Dirt,,Grass,Poaceae,Grass,1,1,2,,5
+48,"MJV3-15-BIO-VT-3,2-2E",1,57,35.235571,-115.802228,3/16/15,,Espericueta/Reyes,,"34,35",Dirt,,,,Unknown 7B,4,5,2,,5
+49,"MJV3-15-BIO-VT-3,2-2E",1,57,35.235571,-115.802228,3/16/15,,Espericueta/Reyes,,"34,35",Dirt,,Grass,Poaceae,grass,1,5,2,,5
+50,"MJV3-15-BIO-VT-3,2-2F",1,58,35.235499,-115.802204,3/16/15,,Espericueta/Reyes,,"36,37",Rock,,no plants found,,No plants,0,0,0,,5
+51,"MJV3-15-BIO-VT-3,2-3A",1,59,35.235801,-115.802152,3/16/15,,Espericueta/Reyes,,"38,39",Rock,,Forget me not,Boraginaceae,Cryptantha angustifolia,1,5,4,,5
+52,"MJV3-15-BIO-VT-3,2-3A",1,59,35.235801,-115.802152,3/16/15,,Espericueta/Reyes,,"38,39",Rock,,,,Unknown 13B,2,5,4,,5
+53,"MJV3-15-BIO-VT-3,2-3A",1,59,35.235801,-115.802152,3/16/15,,Espericueta/Reyes,,"38,39",Rock,,,,Unknown 6B,1,5,4,,5
+54,"MJV3-15-BIO-VT-3,2-3A",1,59,35.235801,-115.802152,3/16/15,,Espericueta/Reyes,,"38,39",Rock,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,1,5,4,,5
+55,"MJV3-15-BIO-VT-3,2-3B",1,60,35.235823,-115.802149,3/16/15,,Espericueta/Reyes,,"40,41",Plant,,Mormon tea,Ephedraceae,Ephedra viridis,1,4,4,,5
+56,"MJV3-15-BIO-VT-3,2-3B",1,60,35.235823,-115.802149,3/16/15,,Espericueta/Reyes,,"40,41",Plant,,Teddy Bear Cholla,Cactaceae,Optunia bigelovii,1,4,4,,5
+57,"MJV3-15-BIO-VT-3,2-3B",1,60,35.235823,-115.802149,3/16/15,,Espericueta/Reyes,,"40,41",Plant,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,1,4,4,,5
+58,"MJV3-15-BIO-VT-3,2-3B",1,60,35.235823,-115.802149,3/16/15,,Espericueta/Reyes,,"40,41",Plant,,,,Unknown 17B,1,4,4,,5
+59,"MJV3-15-BIO-VT-3,2-3C",1,61,35.235822,-115.802153,3/16/15,,Espericueta/Reyes,,42-44,Boulder,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,60,63,3,,5
+60,"MJV3-15-BIO-VT-3,2-3C",1,61,35.235822,-115.802153,3/16/15,,Espericueta/Reyes,,42-44,Boulder,,,,Unknown 13B,2,63,3,,5
+61,"MJV3-15-BIO-VT-3,2-3C",1,61,35.235822,-115.802153,3/16/15,,Espericueta/Reyes,,42-44,Boulder,,Pepperweed,Brassicaceae,Lepidium densiflorum,1,63,3,,5
+62,"MJV3-15-BIO-VT-3,2-3D",1,62,35.235944,-115.802164,3/16/15,,Espericueta/Reyes,,"45,46",Rock,,Barrel cactus,Cactaceae,Ferocactus cylindraceus,1,28,5,,5
+63,"MJV3-15-BIO-VT-3,2-3D",1,62,35.235944,-115.802164,3/16/15,,Espericueta/Reyes,,"45,46",Rock,,Mojave yucca,Agavaceae,Yucca schidigera,1,28,5,,5
+64,"MJV3-15-BIO-VT-3,2-3D",1,62,35.235944,-115.802164,3/16/15,,Espericueta/Reyes,,"45,46",Rock,,Mormon tea,Ephedraceae,Ephedra viridis,1,28,5,,5
+65,"MJV3-15-BIO-VT-3,2-3D",1,62,35.235944,-115.802164,3/16/15,,Espericueta/Reyes,,"45,46",Rock,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,25,28,5,,5
+66,"MJV3-15-BIO-VT-3,2-3D",1,62,35.235944,-115.802164,3/16/15,,Espericueta/Reyes,,"45,46",Rock,,"Bryophyte, non vascular",,Bryophyte,5,28,5,,5
+67,"MJV3-15-BIO-VT-3,2-3E",1,63,35.236000,-115.802137,3/16/15,,Espericueta/Reyes,,"47,48",Rock,,,,Unknown 6B,7,8,2,,5
+68,"MJV3-15-BIO-VT-3,2-3E",1,63,35.236000,-115.802137,3/16/15,,Espericueta/Reyes,,"47,48",Rock,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,1,8,2,,5
+69,"MJV3-15-BIO-VT-3,2-3F",1,64,35.236059,-115.802102,3/16/15,,Espericueta/Reyes,,101-103,Sand,,Teddy Bear Cholla,Cactaceae,Cylindropuntia bigelovii,3,7,4,,5
+70,"MJV3-15-BIO-VT-3,2-3F",1,64,35.236059,-115.802102,3/16/15,,Espericueta/Reyes,,101-103,Sand,,,,Unknown 6B,2,7,4,,5
+71,"MJV3-15-BIO-VT-3,2-3F",1,64,35.236059,-115.802102,3/16/15,,Espericueta/Reyes,,101-103,Sand,,Grass,Poaceae,grass,1,7,4,,5
+72,"MJV3-15-BIO-VT-3,2-3F",1,64,35.236059,-115.802102,3/16/15,,Espericueta/Reyes,,101-103,Sand,,,,Unkonwn 23B,1,7,4,,5
+73,"MJV3-15-BIO-VT-3,2-3G",1,65,35.236088,-115.802076,3/16/15,,Espericueta/Reyes,,"104,105",Rock,,Desert trumpet,Polygonaceae,Eriogonum inflatum,6,7,2,,5
+74,"MJV3-15-BIO-VT-3,2-3G",1,65,35.236088,-115.802076,3/16/15,,Espericueta/Reyes,,"104,105",Rock,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,1,7,2,,5
+75,"MJV3-15-BIO-VT-3,2-3H",1,67,35.236159,-115.802086,3/16/15,,Espericueta/Reyes,,"108,109",Rock,,Mormon tea,Ephedraceae,Ephedra viridis,1,8,6,,5
+76,"MJV3-15-BIO-VT-3,2-3H",1,67,35.236159,-115.802086,3/16/15,,Espericueta/Reyes,,"108,109",Rock,,Pencil cholla,Cactaceae,Opuntia ramosissima,1,8,6,,5
+77,"MJV3-15-BIO-VT-3,2-3H",1,67,35.236159,-115.802086,3/16/15,,Espericueta/Reyes,,"108,109",Rock,,"Bryophyte, non vascular",,Bryophyte,1,8,6,,5
+78,"MJV3-15-BIO-VT-3,2-3H",1,67,35.236159,-115.802086,3/16/15,,Espericueta/Reyes,,"108,109",Rock,,Globemallow,Malvaceae,Sphaeralcea ambigua,1,8,6,,5
+79,"MJV3-15-BIO-VT-3,2-3H",1,67,35.236159,-115.802086,3/16/15,,Espericueta/Reyes,,"108,109",Rock,,,,Unknown 13B,2,8,6,,5
+80,"MJV3-15-BIO-VT-3,2-3H",1,67,35.236159,-115.802086,3/16/15,,Espericueta/Reyes,,"108,109",Rock,,,,Unknown 17B,3,8,6,,5
+81,"MJV3-15-BIO-VT-3,2-3I",1,69,35.236199,-115.802092,3/16/15,,Espericueta/Reyes,,"110,111",Rock,,Creosote,Zygophyllaceae,Larrea tridentata,1,6,5,,5
+82,"MJV3-15-BIO-VT-3,2-3I",1,69,35.236199,-115.802092,3/16/15,,Espericueta/Reyes,,"110,111",Rock,,Desert trumpet,Polygonaceae,Eriogonum inflatum,4,6,5,,5
+83,"MJV3-15-BIO-VT-3,2-3I",1,69,35.236199,-115.802092,3/16/15,,Espericueta/Reyes,,"110,111",Rock,,grass,Poaceae,grass,1,6,5,,5
+84,"MJV3-15-BIO-VT-3,2-3I",1,69,35.236199,-115.802092,3/16/15,,Espericueta/Reyes,,"110,111",Rock,,"Bryophyte, non vascular",,Bryophyte,1,6,5,,5
+85,"MJV3-15-BIO-VT-3,2-3I",1,69,35.236199,-115.802092,3/16/15,,Espericueta/Reyes,,"110,111",Rock,,Lichen,,Lichen,1,6,5,,5
+86,"MJV3-15-BIO-VT-3,2-4A",1,68,35.235822,-115.802008,3/16/15,,Espericueta/Reyes,,"112,113",Rock,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,40,46,3,,5
+87,"MJV3-15-BIO-VT-3,2-4A",1,68,35.235822,-115.802008,3/16/15,,Espericueta/Reyes,,"112,113",Rock,,,,Unknown 7B,4,46,3,,5
+88,"MJV3-15-BIO-VT-3,2-4A",1,68,35.235822,-115.802008,3/16/15,,Espericueta/Reyes,,"112,113",Rock,,,,Unknown 13B,2,46,3,,5
+89,"MJV3-15-BIO-VT-3,2-4B",1,70,35.235776,-115.802024,3/16/15,,Espericueta/Reyes,,"114,115",Rock,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,100,123,5,,5
+90,"MJV3-15-BIO-VT-3,2-4B",1,70,35.235776,-115.802024,3/16/15,,Espericueta/Reyes,,"114,115",Rock,,Mormon tea,Ephedraceae,Ephedra viridis,1,123,5,,5
+91,"MJV3-15-BIO-VT-3,2-4B",1,70,35.235776,-115.802024,3/16/15,,Espericueta/Reyes,,"114,115",Rock,,Pepperweed,Polygonaceae,Lepidium densiflorum,20,123,5,,5
+92,"MJV3-15-BIO-VT-3,2-4B",1,70,35.235776,-115.802024,3/16/15,,Espericueta/Reyes,,"114,115",Rock,,,,Unknown 17B,1,123,5,,5
+93,"MJV3-15-BIO-VT-3,2-4B",1,70,35.235776,-115.802024,3/16/15,,Espericueta/Reyes,,"114,115",Rock,,Mojave yucca,Agavaceae,Yucca schidigera,1,123,5,,5
+94,"MJV3-15-BIO-VT-3,2-4C",1,71,35.235715,-115.801974,3/16/15,,Espericueta/Reyes,,"116,117",Rock,,Mormon tea,Ephedraceae,Ephedra viridis,1,4,4,,5
+95,"MJV3-15-BIO-VT-3,2-4C",1,71,35.235715,-115.801974,3/16/15,,Espericueta/Reyes,,"116,117",Rock,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,1,4,4,,5
+96,"MJV3-15-BIO-VT-3,2-4C",1,71,35.235715,-115.801974,3/16/15,,Espericueta/Reyes,,"116,117",Rock,,,,Unknown 13B,1,4,4,,5
+97,"MJV3-15-BIO-VT-3,2-4C",1,71,35.235715,-115.801974,3/16/15,,Espericueta/Reyes,,"116,117",Rock,,Desert Cholla,Cactaceae,Optunia bigelovii,1,4,4,,5
+98,"MJV3-15-BIO-VT-3,2-4D",1,72,35.235660,-115.801973,3/16/15,,Espericueta/Reyes,,"118,119",Gravel,,Desert Cholla,Cactaceae,Optunia bigelovii,1,23,3,,5
+99,"MJV3-15-BIO-VT-3,2-4D",1,72,35.235660,-115.801973,3/16/15,,Espericueta/Reyes,,"118,119",Gravel,,grass,Poaceae,grass,20,23,3,,5
+100,"MJV3-15-BIO-VT-3,2-4D",1,72,35.235660,-115.801973,3/16/15,,Espericueta/Reyes,,"118,119",Gravel,,,,Unknown 17B,2,23,3,,5
+101,"MJV3-15-BIO-VT-3,2-4E",1,73,35.235620,-115.801969,3/16/15,,Espericueta/Reyes,,"120,121",Sand,,,,Unknown 13B,1,3,2,,5
+102,"MJV3-15-BIO-VT-3,2-4E",1,73,35.235620,-115.801969,3/16/15,,Espericueta/Reyes,,"120,121",Sand,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,2,3,2,,5
+103,"MJV3-15-BIO-VT-3,2-4F",1,74,35.235603,-115.801957,3/16/15,,Espericueta/Reyes,,122-125,Rock,,grass,Poaceae,grass,1,5,5,,5
+104,"MJV3-15-BIO-VT-3,2-4F",1,74,35.235603,-115.801957,3/16/15,,Espericueta/Reyes,,122-125,Rock,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,1,5,5,,5
+105,"MJV3-15-BIO-VT-3,2-4F",1,74,35.235603,-115.801957,3/16/15,,Espericueta/Reyes,,122-125,Rock,,"Bryophyte, non vascular",,Bryophyte,1,5,5,,5
+106,"MJV3-15-BIO-VT-3,2-4F",1,74,35.235603,-115.801957,3/16/15,,Espericueta/Reyes,,122-125,Rock,,Pepperweed,Boraginaceae,Lepidium densiflorum,1,5,5,,5
+107,"MJV3-15-BIO-VT-3,2-4F",1,74,35.235603,-115.801957,3/16/15,,Espericueta/Reyes,,122-125,Rock,,Bladderpod,Cleomaceae,Peritoma arborea,2,5,5,,5
+108,"MJV3-15-BIO-VT-3,2-4G",1,75,35.235493,-115.801902,3/16/15,,Espericueta/Reyes,,"126,127",Rock,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,1,4,2,,5
+109,"MJV3-15-BIO-VT-3,2-4G",1,75,35.235493,-115.801902,3/16/15,,Espericueta/Reyes,,"126,127",Rock,,,,Unknown 13B,3,4,2,,5
+110,"MJV3-15-BIO-VT-3,2-4H",1,76,35.235452,-115.801921,3/16/15,,Espericueta/Reyes,,"128,129",Rock,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,1,8,6,,5
+111,"MJV3-15-BIO-VT-3,2-4H",1,76,35.235452,-115.801921,3/16/15,,Espericueta/Reyes,,"128,129",Rock,,,,Unknown 24B,1,8,6,,5
+112,"MJV3-15-BIO-VT-3,2-4H",1,76,35.235452,-115.801921,3/16/15,,Espericueta/Reyes,,"128,129",Rock,,,,Unknown 6B,1,8,6,,5
+113,"MJV3-15-BIO-VT-3,2-4H",1,76,35.235452,-115.801921,3/16/15,,Espericueta/Reyes,,"128,129",Rock,,,,Unknown 13B,4,8,6,,5
+114,"MJV3-15-BIO-VT-3,2-4H",1,76,35.235452,-115.801921,3/16/15,,Espericueta/Reyes,,"128,129",Rock,,,,Unknown 17B,1,8,6,,5
+115,"MJV3-15-BIO-VT-3,2-4H",1,76,35.235452,-115.801921,3/16/15,,Espericueta/Reyes,,"128,129",Rock,,Grass,Poaceae,grass,1,8,6,,5
+116,"MJV3-15-BIO-VT-3,2-4I",1,77,35.235417,-115.801898,3/16/15,,Espericueta/Reyes,,"130,131",Plant,,,,Unknown 13B,2,5,4,,5
+117,"MJV3-15-BIO-VT-3,2-4I",1,77,35.235417,-115.801898,3/16/15,,Espericueta/Reyes,,"130,131",Plant,,"Bryophyte, non vascular",,Bryophyte,1,5,4,,5
+118,"MJV3-15-BIO-VT-3,2-4I",1,77,35.235417,-115.801898,3/16/15,,Espericueta/Reyes,,"130,131",Plant,,Red brome,Poaceae,Bromus madritensis ssp. Rubens,1,5,4,,5
+119,"MJV3-15-BIO-VT-3,2-4I",1,77,35.235417,-115.801898,3/16/15,,Espericueta/Reyes,,"130,131",Plant,,Teddy Bear Cholla,Cactaceae,Optunia bigelovii,1,5,4,,5
+120,"MJV3-15-BIO-VT-3,2-4I",1,77,35.235417,-115.801898,3/16/15,,Espericueta/Reyes,,"130,131",Plant,,Mormon tea,Ephedraceae,Ephedra viridis,1,5,4,,5
