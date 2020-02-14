@@ -15,6 +15,10 @@ tbl <- sapply(files, read_csv, simplify=FALSE)
 # replace column name "Cover Class" with "Cover_Class" so they properly join
 for (i in seq_along(tbl)){
   colnames(tbl[[i]])[grep("Cover Class", colnames(tbl[[i]]))] <-"Cover_Class"
+  colnames(tbl[[i]])[grep("LAT", colnames(tbl[[i]]))] <-"Latitude"
+  colnames(tbl[[i]])[grep("LONG", colnames(tbl[[i]]))] <-"Longitude"
+  colnames(tbl[[i]])[grep("Genius_Species", colnames(tbl[[i]]))] <-"Genus_Species"
+  
 }
 
 # bind all data tables by column names
@@ -26,17 +30,16 @@ data <- distinct(bound)
 # view column names to find if any are duplicates that should be renamed before bind_rows() as above
 colnames(data) 
 
-
 # pull out columns we're interested in:
 # "Genus_Species", "genus", "species", "Longitude", "Latitude", "Easting", "Northing", "Cover_Class" 
 
 spatial_data <- select(data, Easting, Northing, Latitude, Longitude, Genus_Species, genus, species, Family, Cover_Class)
 
-# remove any rows that have NA in the family column, as as short cut to removing unknown genus and species 
-spatial_data <- spatial_data[!is.na(spatial_data$Family),]
-
+# # remove any rows that have NA in the family column, as as short cut to removing unknown genus and species 
+# spatial_data <- spatial_data[!is.na(spatial_data$Family),]
 
 # next tasks: 
-
+# fix taxonomy 
 # convert easting and northing to lat long, or vice versa
 # convert genus_species to genus and species (separate columns)
+
