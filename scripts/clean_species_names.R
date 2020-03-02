@@ -63,7 +63,6 @@ cleaned_data <- df[!(df$clean_taxa == 'Unknown' & df$Family =='Unknown'),]
 
 #Rename columns to be more descriptive
 data.table::setnames(cleaned_data, 'clean_taxa', 'Genus_species')
-data.table::setnames(cleaned_data, 'Cover_Class', 'Cover_class')
 view(cleaned_data)
 
 ###OUTSTANDING ISSUES: how to pull family names using taxize or other package? 
