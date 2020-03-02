@@ -50,7 +50,8 @@ spatial_data <- select(data, Easting, Northing, Latitude, Longitude, Genus_Speci
 # next tasks: 
 # fix taxonomy 
 # convert easting and northing to lat long, or vice versa
-# convert genus_species to genus and species (separate columns)
+# convert genus_species to genus and species (separate columns), additional column for subspecies/variety
+# combine this script with dean's
 
 <<<<<<< HEAD
 # plot to view initial shape
