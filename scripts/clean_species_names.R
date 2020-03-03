@@ -10,13 +10,19 @@ library(DataCombine)
 # change to your project HOME directory directory
 setwd("/Users/deanberkowitz/Documents/mishler_lab/thesis/mnp_spatial_phylo/") 
 
-# load all csv files and merge into one large data table
-path <- "data/raw/spatial" # path to your raw data, if different organization than this
+# set filepath
+path <- "data/semiclean" # path to your data
 
+#list files
 files <- list.files(path = path, full.names = T)
-#check files
-my_data <- read_csv(files[1])
-head(my_data$Genus_Species)
+
+#read in data
+my_data <- read.csv(files[1])
+head(my_data)
+
+#subset data into 2 dataframes, one with single column Genus_species and one with two columns genus, species
+
+nrow(spatial_data) == nrow(my_data)
 
 #Subset df to include only useful columns
 my_data_subset <- my_data %>% select(Latitude, Longitude, Genus_Species, Family, Cover_Class, Observation, Number)

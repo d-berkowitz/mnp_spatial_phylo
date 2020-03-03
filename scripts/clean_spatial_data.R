@@ -43,7 +43,7 @@ spatial_data <- spatial_data %>%
 
 
 ##export to csv in directory for semiclean data
-write_csv(spatial_data, path = "data/semiclean/spatial_data", na = "NA", 
+write_csv(spatial_data, path = "data/semiclean/spatial_data.csv", na = "NA", 
           append = FALSE, col_names = TRUE, 
           quote_escape = "double")
 
