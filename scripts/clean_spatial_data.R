@@ -1,8 +1,10 @@
+#merge different CSVs into a single master dataframe, subset that dataframe and remove duplicate rows.
+
 library(tidyverse)
 library(dplyr)
 library(readr)
 
-setwd("/Users/jennaekwealor/Documents/dean_project/mnp_spatial_phylo") # change to your project HOME directory directory
+setwd("/Users/deanberkowitz/Documents/mishler_lab/thesis/mnp_spatial_phylo") # change to your project HOME directory directory
 
 # load all csv files and merge into one large data table
 path <- "data/raw/spatial" # path to your raw data, if different organization than this
@@ -12,7 +14,7 @@ files <- list.files(path = path, full.names = T)
 # make a list of the files that are loaded
 tbl <- sapply(files, read_csv, simplify=FALSE) 
 
-# replace column name "Cover Class" with "Cover_Class" so they properly join
+# canonicalize column names so they properly join, remove erroneous/misspelled column names
 for (i in seq_along(tbl)){
   colnames(tbl[[i]])[grep("Cover Class", colnames(tbl[[i]]))] <-"Cover_Class"
   colnames(tbl[[i]])[grep("LAT", colnames(tbl[[i]]))] <-"Latitude"
@@ -31,12 +33,19 @@ data <- distinct(bound)
 colnames(data) 
 
 # pull out columns we're interested in:
-# "Genus_Species", "genus", "species", "Longitude", "Latitude", "Easting", "Northing", "Cover_Class" 
+# "" "Easting", "Northing", Longitude", "Latitude", Genus_Species", "genus", "species", , "Cover_Class, "Number" 
 
-spatial_data <- select(data, Easting, Northing, Latitude, Longitude, Genus_Species, genus, species, Family, Cover_Class)
+spatial_data <- select(data, Easting, Northing, Latitude, Longitude, Genus_Species, genus, species, Family, Cover_Class, Number)
 
-# # remove any rows that have NA in the family column, as as short cut to removing unknown genus and species 
-# spatial_data <- spatial_data[!is.na(spatial_data$Family),]
+#add subspecies column for tidy data
+spatial_data <- spatial_data %>%
+                  mutate(subspecies = NA)
+
+
+##export to csv in directory for semiclean data
+write_csv(spatial_data, path = "data/semiclean/spatial_data", na = "NA", 
+          append = FALSE, col_names = TRUE, 
+          quote_escape = "double")
 
 # next tasks: 
 # fix taxonomy 
