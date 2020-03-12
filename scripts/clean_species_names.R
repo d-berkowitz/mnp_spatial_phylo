@@ -107,7 +107,7 @@ data.table::setnames(cleaned_data, 'clean_taxa', 'Genus_species')
 view(cleaned_data)
 
 
-###########CLEAN SPATIAL DATA
+###########CLEAN SPATIAL DATA START
 #create new df with lat, long in dms only to clean and prepare for convesion to dd
 dd_only <- cleaned_data %>% 
   filter(!grepl(pattern = c(' '), Latitude))
@@ -130,10 +130,16 @@ dd_only_utm <- dd_only_sf %>%
   st_transform(crs = 32611) #project data to WGS84 UTM zone 11N
 dd_only_utm
 
+do.call(st_geometry(dd_only_utm), dd_only_utm$Genus_species) %>% as_tibble() %>% setNames(c('east', 'north'))
+test_df <- as.data.frame(dd_only_utm)
+test_df$geometry
 ###extract northing, easting from geom column?
 test <- do.call(rbind, st_geometry(dd_only_utm)) %>% 
   as_tibble(.name_repair = "minimal") %>% setNames(c("east","north"))
 test
+
+
+#############CLEAN SPATIAL DATA END
 
 dd_only$Latitude <- as.numeric(dd_only$Latitude)
 sapply(dd_only$Latitude, as.numeric)
