@@ -106,6 +106,13 @@ cleaned_data <- dupl_remov[!(dupl_remov$Genus_species == 'Unknown' & dupl_remov$
 data.table::setnames(cleaned_data, 'clean_taxa', 'Genus_species')
 view(cleaned_data)
 
+#extract unique taxa names for use in Genbank query
+taxa_list <- cleaned_data$Genus_species %>% sort() %>% unique()
+
+#write taxa list to CSV, .txt files
+write.csv(taxa_list, file = "data/clean/taxa_list.csv") # change path relevant to your directory organization
+write.table(taxa_list, file = "data/clean/taxa_list.txt", sep = " ", col.names = FALSE)
+
 
 ###########CLEAN SPATIAL DATA START
 #create new df with lat, long in dms only to clean and prepare for convesion to dd
