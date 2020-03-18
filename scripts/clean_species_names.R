@@ -9,7 +9,7 @@ library(DataCombine)
 library(comprehenr)
 library(sf)
 
-# change to your project HOME directory directory
+# change to your project HOME directory
 setwd("/Users/deanberkowitz/Documents/mishler_lab/thesis/mnp_spatial_phylo/") 
 
 # set filepath
@@ -34,7 +34,6 @@ na_gensp <- my_data %>%
 
 not_na_gensp <- my_data %>%
   filter(!is.na(Genus_Species))
-
 
 #move all values from separate genus, species columns to the Genus_Species column to prepare for taxa name spellchecking/cleaning
 
@@ -81,6 +80,7 @@ merged <- my_data_subset %>%
 #rename matched_name2 to clean taxa to explicitly indicate column with cleaned taxa names
 merged <- merged %>% 
           rename(clean_taxa = matched_name2)
+
 #remove original (erroneous) Genus_Species column, extraneous columns
 pruned <- subset(merged, select = -c(submitted_name, Genus_Species))
 
@@ -102,9 +102,8 @@ dupl_remov <- dupl_remov %>%
 #remove observations where both taxa and family are unknown
 cleaned_data <- dupl_remov[!(dupl_remov$Genus_species == 'Unknown' & dupl_remov$Family =='Unknown'),]
 
-#Rename columns to be more descriptive
-data.table::setnames(cleaned_data, 'clean_taxa', 'Genus_species')
-view(cleaned_data)
+###########STILL NEED TO REMOVE ALL SINGLE WORD TAXA FROM DATA (EXCEPT PECTOCARYA & UNKNOWN)
+
 
 #extract unique taxa names for use in Genbank query
 taxa_list <- cleaned_data$Genus_species %>% sort() %>% unique()
