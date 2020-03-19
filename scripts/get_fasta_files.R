@@ -13,6 +13,10 @@ taxa_list <- read.csv(path)
 taxa_list <- taxa_list %>% subset(select = x) %>%
   setNames('taxa')
 taxa_list
+#create character vector with desired genes
+gene_list <- c('ITS', 'atpb', 'trnK', 'trnL', 'matK', 'matR', 'ndhF', 'rbcL')
+#add genes as columns to df with NA as placeholders before adding Accession IDs from GenBank
+taxa_list[gene_list] <- NA
 
 #see list of all NCBI databases
 entrez_dbs()
