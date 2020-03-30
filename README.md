@@ -15,5 +15,6 @@ Vegetation transect data was collected by groups of volunteers equipped with loc
 For each quadrat, the following data were collected manually in field notebooks: 
 1) Ground cover type
 2) Vascular plant taxa
-3) # of individuals per taxa
+3) \# of individuals per taxa
 4) X/Y information recorded in either Latitude/Longitude or Northing/Easting with a handheld GPS, recording the point location of the quadrat
+

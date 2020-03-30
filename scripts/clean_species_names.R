@@ -102,6 +102,17 @@ dupl_remov <- dupl_remov %>%
 #remove observations where both taxa and family are unknown
 cleaned_data <- dupl_remov[!(dupl_remov$Genus_species == 'Unknown' & dupl_remov$Family =='Unknown'),]
 
+#IDIOSYNCRATIC STEP, UNECCESSARY TO REPLICATE. replace all occurrences of 'Cylindropuntia bigelovii' with 
+#'Cylindropuntia echinocarpa' and also 'Cylindropuntia californica' to 'Cylindropuntia acanthocarpa' 
+#'to rectify plant misidentification from data collection process
+cleaned_data$Genus_species <- sapply(cleaned_data$Genus_species, function(taxon) {
+  gsub("Cylindropuntia bigelovii", "Cylindropuntia echinocarpa", taxon)
+})
+
+cleaned_data$Genus_species <- sapply(cleaned_data$Genus_species, function(taxon) {
+  gsub("Cylindropuntia californica", "Cylindropuntia acanthocarpa", taxon)
+})
+
 ###########STILL NEED TO REMOVE ALL SINGLE WORD TAXA FROM DATA (EXCEPT PECTOCARYA & UNKNOWN)
 
 
@@ -117,6 +128,9 @@ write.table(taxa_list, file = "data/clean/taxa_list.txt", sep = " ", col.names =
 #create new df with lat, long in dms only to clean and prepare for convesion to dd
 dd_only <- cleaned_data %>% 
   filter(!grepl(pattern = c(' '), Latitude))
+
+dms_only <- cleaned_data %>% 
+  filter(grepl(pattern = c(' '), Latitude))
 
 # remove ° symbol from longitudes (idiosyncracy of the data I am working with)
 dd_only$Longitude <- dd_only$Longitude %>%
