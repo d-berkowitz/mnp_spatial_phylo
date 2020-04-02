@@ -55,6 +55,12 @@ my_data_subset <- bound %>%
                   select(Easting, Northing, Latitude, Longitude, 
                          Genus_Species, Family, Cover_Class, Number)
 
+#test Remove unknown from gen_sp to try and retain information on type of unknown
+my_data_subset$Genus_Species <- sapply(my_data_subset$Genus_Species, function(unknown_taxon) {
+  gsub('Unknown', '', unknown_taxon)
+})
+
+
 #specify reference databases to use
 sources <- c("EOL", "The International Plant Names Index", "ITIS")
 
@@ -119,17 +125,22 @@ cleaned_data$Genus_species <- sapply(cleaned_data$Genus_species, function(taxon)
 #extract unique taxa names for use in Genbank query
 taxa_list <- cleaned_data$Genus_species %>% sort() %>% unique()
 
+
 #write taxa list to CSV, .txt files
 write.csv(taxa_list, file = "data/clean/taxa_list.csv") # change path relevant to your directory organization
 write.table(taxa_list, file = "data/clean/taxa_list.txt", sep = " ", col.names = FALSE)
 
 
 ###########CLEAN SPATIAL DATA START
-#create new df with lat, long in dms only to clean and prepare for convesion to dd
-dd_only <- cleaned_data %>% 
+#drop columns in Easting, Northing due to uncertainty about their origins. Will create Easting, Northing from Latitude and Longitude for all data points
+#to minimize error / assumptions about data since some have Easting/Northing and some don't.
+lat_long_only <- cleaned_data %>% select(-c(Easting, Northing))
+
+#create new df with lat, long in dms only to clean and prepare for conversion to dd
+dd_only <- lat_long_only %>% 
   filter(!grepl(pattern = c(' '), Latitude))
 
-dms_only <- cleaned_data %>% 
+dms_only <- lat_long_only %>% 
   filter(grepl(pattern = c(' '), Latitude))
 
 # remove ° symbol from longitudes (idiosyncracy of the data I am working with)
@@ -142,6 +153,41 @@ dd_only$Longitude <- as.numeric(dd_only$Longitude)
 #remove rows where latitude == longitude
 dd_only <- dd_only %>%
   filter(!dd_only$Longitude == dd_only$Latitude)
+
+
+#convert DMS to DD 
+#convert latitude, longitude columns to character vectors to prepare for conversion to decimal degrees
+dms_only$Latitude <- lapply(dms_only$Latitude, as.character)
+dms_only$Longitude <- lapply(dms_only$Longitude, as.character)
+
+
+test <- dms_only$Latitude %>% head(5)
+test <- lapply(test, function(degree) {
+  gsub(pattern = "° ", replacement = "d", degree)
+})
+test <- lapply(test, function(space) {
+  gsub(pattern = " ", replacement = "", space)
+})
+test <- lapply(test, function(north) {
+  gsub(pattern = "\"", replacement = "\"N", north)
+})
+test
+
+#write function to convert dms to dd as numerics
+dms_to_dd <- function(dms_coord) {
+  dd_coord <- sp::char2dms(from = dms_coord) %>% as.numeric()
+  dd_coord
+}
+#test function, it works!
+map(test, dms_to_dd)
+
+############LEFT OFF HERE: NEXT TIME - APPLY GSUB PATTERNS TO ENTIRE LATITUDE COLUMN, 
+##LONGITUDE (BUT W NOT N)
+#MAP COLUMNS IN DMS DATAFRAME TO FUNCTION, REPLACE THEM WITH DD, MERGE DATAFRAME WITH DD DATAFRAME
+
+
+as.numeric(test2)
+#convert dataframe to sf spatial dataframe object
 dd_only_sf <- st_as_sf(dd_only, coords = c('Longitude', 'Latitude'))
 dd_only_sf #inspect min, max lat longs to see if they make sense
 
@@ -161,29 +207,6 @@ test
 
 #############CLEAN SPATIAL DATA END
 
-dd_only$Latitude <- as.numeric(dd_only$Latitude)
-sapply(dd_only$Latitude, as.numeric)
-dms_only <- cleaned_data %>% 
-  filter(grepl(pattern = c(' '), Latitude))
-
-#replace all special characters with spaces
-
-dms_only$Latitude <- gsub('°', '', dms_only$Latitude)
-dms_only$Latitude <- gsub('\'', '', dms_only$Latitude)
-dms_only$Latitude <- gsub('"', '', dms_only$Latitude)
-dms_only$Longitude <- gsub('°', '', dms_only$Longitude)
-dms_only$Longitude <- gsub('\'', '', dms_only$Longitude)
-dms_only$Longitude <- gsub('"', '', dms_only$Longitude)
-
-view(dms_only)
-#convert from DMS to DD
-dms_only$Latitude <- measurements::conv_unit(dms_only$Latitude, from = 'deg_min_sec', to = 'dec_deg')
-dms_only$Longitude <- measurements::conv_unit(dms_only$Longitude, from = 'deg_min_sec', to = 'dec_deg')
-
-#join to original df by binding rows of DD and newly converted DMS to DD
-
-spatial_bound <- rbind(dms_only, dd_only)
-view(spatial_bound)
 #view data
 ggplot2::ggplot(spatial_bound, aes(x = Longitude, y = Latitude)) + geom_point() + 
   theme(
@@ -209,3 +232,9 @@ prop_latlong <- round((num_latlong / df_len), 3)
 paste0(prop_utm*100, '% of the data have northing / easting, while ', prop_latlong*100, ' % of the data have lat/long')
 
                         
+#######atttempt to resolve unknown moss / licken issue
+
+example_moss <- c('gray moss', 'Moss', 'Bright Green Moss', 'dried moss', 'moss', 'gray-brown moss')
+example_moss
+
+
