@@ -160,26 +160,77 @@ dd_only <- dd_only %>%
 dms_only$Latitude <- lapply(dms_only$Latitude, as.character)
 dms_only$Longitude <- lapply(dms_only$Longitude, as.character)
 
+# convert degree, minute, second characters in Latitude and Longitude column to 
+#format required by char2dms function
 
-test <- dms_only$Latitude %>% head(5)
-test <- lapply(test, function(degree) {
-  gsub(pattern = "° ", replacement = "d", degree)
-})
-test <- lapply(test, function(space) {
-  gsub(pattern = " ", replacement = "", space)
-})
-test <- lapply(test, function(north) {
-  gsub(pattern = "\"", replacement = "\"N", north)
-})
-test
-
-#write function to convert dms to dd as numerics
-dms_to_dd <- function(dms_coord) {
-  dd_coord <- sp::char2dms(from = dms_coord) %>% as.numeric()
-  dd_coord
+#helper function to fix degree symbol
+fix_deg <- function(degree_symbol) {
+  gsub(pattern = "° ", replacement = "d", degree_symbol)
 }
-#test function, it works!
-map(test, dms_to_dd)
+
+#helper function to remove spaces
+fix_space <- function(space_symbol) {
+  gsub(pattern = " ", replacement = "", space_symbol)
+}
+
+#helper function to insert explicit N indicating latitude
+fix_north <- function(north_symbol) {
+  gsub(pattern = "\"", replacement = "\"N", north_symbol)
+}
+
+#helper function to insert explicit W indicating longitude
+fix_west <- function(west_symbol) {
+  gsub(pattern = "\"", replacement = "\"W", west_symbol)
+}
+
+#function to convert latitude coordinates to decimal degrees
+fix_latitude <- function(lat_coord){
+  lat_coord1 <- fix_deg(lat_coord)
+  lat_coord2 <- fix_space(lat_coord1)
+  lat_coord3 <- fix_north(lat_coord2)
+  dd_lat <- lat_coord3 %>% sp::char2dms() %>% as.numeric()
+  dd_lat
+}
+
+#function to convert longitude coordinates to decimal degrees
+fix_longitude <- function(long_coord) {
+  long_coord1 <- fix_deg(long_coord)
+  long_coord2 <- fix_space(long_coord1)
+  long_coord3 <- fix_west(long_coord2)
+  dd_long <- long_coord3 %>% sp::char2dms() %>% as.numeric()
+  dd_long
+}
+
+#create test longitude vector to check if function works
+test_long <- dms_only$Longitude %>% head(1)
+#create test latitude vector to check if function works
+test_lat <- dms_only$Latitude %>% head(1)
+
+#see if function correctly converts longitude, it DOESNT WORK!
+long_works_test <- lapply(test_long, fix_longitude)
+print(test_long)
+print(long_works_test)
+
+#see if function correcty converts latitude, it WORKS!
+lat_works_test <- lapply(test_lat, fix_latitude)
+print(lat_works_test)
+print(test_lat)
+
+##attempt to build own DMS to DD function to see if it resolves incorrect conversion issue when using 
+##sp::char2dms()
+dms2dd <- function(dms_coord) {
+  
+}
+
+## try to understand how to split strings, need to do this to create the deg, min, sec variables for
+## dms2dd function
+foo <- "35d14'4.322\"N"
+deg <- str_split(foo, 'd')[[1]][1]
+str_split(foo, ".*d")
+
+l 
+
+
 
 ############LEFT OFF HERE: NEXT TIME - APPLY GSUB PATTERNS TO ENTIRE LATITUDE COLUMN, 
 ##LONGITUDE (BUT W NOT N)
