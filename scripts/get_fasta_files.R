@@ -1,8 +1,6 @@
 # Get FASTA files
-library(rentrez)
-library(dplyr)
-library(tidyverse)
-library(ape)
+packages <- c('rentrez', 'dplyr', 'tidyverse', 'ape')
+lapply(packages, library, character.only = TRUE) #load packages
 
 #set working directory to project home folder
 setwd("/Users/deanberkowitz/Documents/mishler_lab/thesis/mnp_spatial_phylo/")
@@ -14,12 +12,12 @@ path <- "data/clean/taxa_list.csv"
 taxa_list <- read.csv(path)
 
 #convert column to character vector
-taxa_list$taxa <- lapply(taxa_list$taxa, as.character)
+taxa_list$taxa <- map_chr(taxa_list$taxa, as.character)
 
 #create character vector with desired genes
 gene_list <- c('internal transcribed spacer', 'atpb', 'trnK', 'trnL', 'matK', 'matR', 'ndhF', 'rbcL')
 
-# add genes as columns to df with NA as placeholders before adding Accession IDs from GenBank
+# add genes as columns to df with NA as placeholders before adding unique IDs from GenBank
 #taxa_list[gene_list] <- NA
 
 #write function to create GenBank query term based on input taxon and gene
@@ -39,7 +37,7 @@ for (gene in colnames(term_df)) {
   term_df[[gene]] <- map2(taxa_list$taxa, gene, create_term)
 }
 
-#define get_max_id function to query GenBank and pull the ID of the entry with the most basepairs
+#define get_max_id function to query GenBank and pull the unique ID of the entry with the most basepairs
 get_max_ID <- function(term){
   search <- entrez_search(db = "nuccore", term = term, retmax = 20)
   if (search$count == 0){
@@ -61,29 +59,50 @@ get_max_ID <- function(term){
   }
 }
 
-#create variable df to store results of accession id
+#create variable df to store results of unique id
 result <- taxa_list
 
 # loop get_max_ID function columnwise across dataframe containing query terms to gather 
-#accession IDs for every taxa and gene
+#unique IDs for every taxa and gene
 for (gene in colnames(term_df)) {
   gene_terms <- term_df %>% select(gene)
   gene_terms_vector <- gene_terms[, gene]
-  result[[gene]] <- map(gene_terms_vector, get_max_ID)
+  result[[gene]] <- map_chr(gene_terms_vector, get_max_ID)
 }
 
 
-##CODE BREAKS SOMETIME DURING trnK QUERY. WHAT TAXA DOES IT BREAK FOR AND WHY??
-## Error: No esummary records found in file
+#save result to file
+write.csv(result, file = "data/clean/unique_ids.csv", row.names = FALSE)
+
+
 
 #Retrieve FASTAs, written based on JC Santos' script found at 
 #http://www.jcsantosresearch.org/Class_2014_Spring_Comparative/pdf/week_2/Jan_13_15_2015_GenBank_part_2.pdf
 
 its_accession_ids <- result[['internal transcribed spacer']] # isolate ITS accession ID vector
 its_sequences <- its_accession_ids %>% read.GenBank() #read sequences and place them in a DNAbin object
+#ignore warning message that displays, indicates that it couldn't get sequences for NAs
+
 ##build a character vector with the species, GenBank accession numbers, and gene name
 its_sequences_GenBank_IDs <- paste(attr(its_sequences, "species"), names(its_sequences), sep = "_internal transcribed spacer_") 
 its_sequences_GenBank_IDs
+
+#try writing fasta file
+write.dna(its_sequences, file = "data/genetic/fasta/its_fasta_try.fasta", format = "fasta", 
+          append = FALSE, nbcol = 6, colsep = " ", colw = 10)
+
+#read it
+its_sequences_seqinr_format <- read.FASTA(file = "data/genetic/fasta/its_fasta_try.fasta",
+                                  type = "DNA")
+
+write.FASTA(x = its_sequences_seqinr_format, header = its_sequences_GenBank_IDs, 
+            file = "data/genetic/fasta/its_seq_seqinr_format.fasta")
+
+its_sequences_new_names <- updateLabel(its_sequences, old = names(its_sequences), new = its_sequences_GenBank_IDs)
+
+write.FASTA(x = its_sequences_new_names, file = "data/genetic/fasta/its_seq_seqinr_format.fasta")
+
+
 
 
 ################ Walkthrough of functions in 'rentrez' package
