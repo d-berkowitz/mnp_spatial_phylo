@@ -74,38 +74,30 @@ for (gene in colnames(term_df)) {
 #save result to file
 write.csv(result, file = "data/clean/unique_ids.csv", row.names = FALSE)
 
-
-
 #Retrieve FASTAs, written based on JC Santos' script found at 
 #http://www.jcsantosresearch.org/Class_2014_Spring_Comparative/pdf/week_2/Jan_13_15_2015_GenBank_part_2.pdf
 
-its_accession_ids <- result[['internal transcribed spacer']] # isolate ITS accession ID vector
-its_sequences <- its_accession_ids %>% read.GenBank() #read sequences and place them in a DNAbin object
-#ignore warning message that displays, indicates that it couldn't get sequences for NAs
+ID_df <- result %>% select(-c(taxa)) # remove taxa column from results df in order to write FASTAs
 
-##build a character vector with the species, GenBank accession numbers, and gene name
-its_sequences_GenBank_IDs <- paste(attr(its_sequences, "species"), names(its_sequences), sep = "_internal transcribed spacer_") 
-its_sequences_GenBank_IDs
+# create function to gather sequences and write them to a FASTA file for each gene of interest using the unique ID dataframe created above
+write_fasta_func <- function(id_df){
+  for (gene in colnames(id_df)){ # loop through each column (gene) in the dataframe 
+    id_vector <- id_df[[gene]] # isolate unqiue ID vector for a single gene 
+    sequences <- read.GenBank(id_vector) # create a DNABin object for the gene, containing all sequences and their respective accession ID's
+    sequences_GenBank_IDs <- paste(attr(sequences, "species"), names(sequences), sep = paste0(" | ", gene, "_")) #build a character vector with the species, GenBank accession numbers, and gene name to create more informative labels associated with each sequence in the FASTA file
+    new_names <- updateLabel(sequences, old = names(sequences), new = sequences_GenBank_IDs) #replace accession IDs with the informative labels created above
+    write.FASTA(x = new_names, file = paste0("data/genetic/fasta/", gene, ".fasta")) # write FASTA file to desired directory
+  }
+}
 
-#try writing fasta file
-write.dna(its_sequences, file = "data/genetic/fasta/its_fasta_try.fasta", format = "fasta", 
-          append = FALSE, nbcol = 6, colsep = " ", colw = 10)
-
-#read it
-its_sequences_seqinr_format <- read.FASTA(file = "data/genetic/fasta/its_fasta_try.fasta",
-                                  type = "DNA")
-
-write.FASTA(x = its_sequences_seqinr_format, header = its_sequences_GenBank_IDs, 
-            file = "data/genetic/fasta/its_seq_seqinr_format.fasta")
-
-its_sequences_new_names <- updateLabel(its_sequences, old = names(its_sequences), new = its_sequences_GenBank_IDs)
-
-write.FASTA(x = its_sequences_new_names, file = "data/genetic/fasta/its_seq_seqinr_format.fasta")
+#get sequences, write FASTA files for each gene
+write_fasta_func(ID_df)
 
 
 
 
-################ Walkthrough of functions in 'rentrez' package
+
+################ Walkthrough of functions in 'rentrez' package. Include b/c informative or remove b/c unnecessary? 
 
 #see list of all NCBI databases
 entrez_dbs()
