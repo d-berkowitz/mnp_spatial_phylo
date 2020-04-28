@@ -7,6 +7,7 @@ library(dplyr)
 library(tidyverse)
 library(sf)
 library(mapview)
+library(leaflet)
 
 # change to your project HOME directory
 setwd("/Users/deanberkowitz/Documents/mishler_lab/thesis/mnp_spatial_phylo/") 
@@ -95,11 +96,12 @@ fix_longitude <- function(long_coord) {
   dd_long
 }
 
-dms_only <- dms_only %>% select(-c('Latitude_DD,', 'Longitude_DD'))
-
 #convert DMS to DD
 dms_only$Latitude_DD <- map_dbl(dms_only$Latitude, fix_latitude)
 dms_only$Longitude_DD <- map_dbl(dms_only$Longitude, fix_longitude)
+
+#remove decimal degree columns from dms_only df
+dms_only <- dms_only %>% select(-c('Latitude_DD,', 'Longitude_DD'))
 
 # drop DMS latitude, longitude columns
 dms_now_dd <- dms_only %>% select(-c('Latitude', 'Longitude'))
@@ -109,6 +111,14 @@ dms_now_dd <- dms_now_dd %>% rename('Latitude' = 'Latitude_DD',
 
 #merge spatial dataframes back together
 spatial_clean <- rbind(dms_now_dd, dd_only)
+
+# filter out erroneous lat / long values that are outside region of interest
+spatial_clean <- spatial_clean %>%
+  filter(Latitude <= 35.241)
+
+#reorder columns 
+spatial_clean <- spatial_clean %>% select(
+  c('Latitude', 'Longitude', 'Genus_species', 'Family', 'Cover_Class', 'Number'))
 
 #convert dataframe to sf spatial dataframe object
 sp_clean_sf <- st_as_sf(spatial_clean, coords = c('Longitude', 'Latitude'))
@@ -120,8 +130,9 @@ sp_clean_utm <- sp_clean_sf %>%
   st_transform(crs = 32611) #project data to WGS84 UTM zone 11N
 sp_clean_utm
 
-mapview(sp_clean_utm)
 
+leaflet(spatial_clean) %>% addProviderTiles(provider =  "Esri.WorldImagery") %>% 
+  addCircleMarkers(radius = 3, color = 'blue', opacity = 0.025, weight = .05)
 d#do.call(st_geometry(dd_only_utm), dd_only_utm$Genus_species) %>% as_tibble() %>% setNames(c('east', 'north'))
 #test_df <- as.data.frame(dd_only_utm)
 #test_df$geometry
