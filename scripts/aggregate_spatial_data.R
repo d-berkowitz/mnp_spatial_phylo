@@ -31,7 +31,7 @@ bound <- bind_rows(lapply(tbl, function(dtt){mutate_all(dtt, as.character)}))
 data <- distinct(bound)
 
 # view column names to find if any are duplicates that should be renamed before bind_rows() as above
-colnames(data) 
+colnames(data) %>% sort()
 
 # pull out columns we're interested in:
 # "" "Easting", "Northing", Longitude", "Latitude", Genus_Species", "genus", "species", , "Cover_Class, "Number" 
