@@ -42,14 +42,12 @@ na_gensp$Genus_Species <- sapply(na_gensp$Genus_Species, function(x) {
   gsub('NA NA', NA, x)
 })
 
-
 ## bind the two dataframes back together
 bound <- rbind(not_na_gensp, na_gensp)
 
-
 #Subset df to include only useful columns
 my_data_subset <- bound %>% 
-                  select(Easting, Northing, Latitude, Longitude, 
+                  select(Latitude, Longitude, 
                          Genus_Species, Family, Cover_Class, Number)
 
 #test Remove unknown from gen_sp to try and retain information on type of unknown
@@ -116,17 +114,28 @@ cleaned_sp_names$Genus_species <- sapply(cleaned_sp_names$Genus_species, functio
   gsub("Cylindropuntia californica", "Cylindropuntia acanthocarpa", taxon)
 })
 
+cleaned_sp_names$Genus_species <- sapply(cleaned_sp_names$Genus_species, function(taxon) {
+  gsub("Lepidium aschersonii", "Lepidium andersonii", taxon)
+})
+
+cleaned_sp_names$Genus_species <- sapply(cleaned_sp_names$Genus_species, function(taxon) {
+  gsub("Bromus madritensis$", "Bromus madritensis ssp. rubens", taxon)
+})
+
+cleaned_sp_names$Genus_species <- sapply(cleaned_sp_names$Genus_species, function(taxon) {
+  gsub("Echinocereus triglochidiatus.+", "Echinocereus triglochidiatus", taxon)
+})
+
 #write cleaned_species_names to .csv
 write.csv(cleaned_sp_names, file = "data/semiclean/clean_species_names.csv", row.names = FALSE)
-
+write.csv(dupl_remov, file = "data/semiclean/clean_species_names_with_unknowns.csv", row.names = FALSE)
 ###########STILL NEED TO REMOVE ALL SINGLE WORD TAXA FROM DATA (EXCEPT PECTOCARYA & UNKNOWN)
 
 
 #extract unique taxa names for use in Genbank query
-taxa_list <- cleaned_data$Genus_species %>% sort() %>% unique()
+taxa_list <- cleaned_sp_names$Genus_species %>% sort() %>% unique()
 taxa_list_df <- data.frame(taxa = taxa_list)
 #write taxa list to CSV, .txt files
 write.csv(taxa_list_df, file = "data/clean/taxa_list.csv", row.names = FALSE) # change path relevant to your directory organization
 write.table(taxa_list_df, file = "data/clean/taxa_list.txt", sep = " ", col.names = FALSE)
-
 
