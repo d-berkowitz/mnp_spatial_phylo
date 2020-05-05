@@ -2,3 +2,4 @@ data/raw/.DS_Store
 .Rhistory
 .gitignore
 .RData
+data/raw/spatial/.DS_Store

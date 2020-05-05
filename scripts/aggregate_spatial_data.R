@@ -28,19 +28,18 @@ for (i in seq_along(tbl)){
 bound <- bind_rows(lapply(tbl, function(dtt){mutate_all(dtt, as.character)}))
 
 # remove any fully duplicated rows
-data <- distinct(bound)
+my_data <- distinct(bound)
 
 # view column names to find if any are duplicates that should be renamed before bind_rows() as above
-colnames(data) %>% sort()
+my_data %>% colnames() %>% sort()
 
 # pull out columns we're interested in:
 # "" "Easting", "Northing", Longitude", "Latitude", Genus_Species", "genus", "species", , "Cover_Class, "Number" 
 
-spatial_data <- select(data, Easting, Northing, Latitude, Longitude, Genus_Species, genus, species, Family, Cover_Class, Number)
-
-#add subspecies column for tidy data
-spatial_data <- spatial_data %>%
-                  mutate(subspecies = NA)
+spatial_data <- my_data %>% 
+  select(Easting, Northing, Latitude, Longitude, 
+         Genus_Species, genus, species, Family, 
+         Cover_Class, Number, Observation, `Observation #`)
 
 
 ##export to csv in directory for semiclean data
