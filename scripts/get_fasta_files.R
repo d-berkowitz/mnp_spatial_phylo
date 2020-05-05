@@ -116,6 +116,31 @@ write.csv(result_one_big, file = "data/genetic/ids/one_big_ids.csv", row.names =
 all_small_id <- result_all_small %>% select(-c(taxa)) # remove taxa column from results df in order to write FASTAs
 one_big_id <- result_one_big %>% select(-c(taxa))
 
+matr_ids <- one_big_id[, 'matR']
+matr_ids_no_na <- matr_ids[!is.na(matr_ids)]
+matr_seqs_no_na <- read.GenBank(access.nb = matr_ids_no_na)
+write.FASTA(x = matr_seqs_no_na, file = "sequences/matR_one_big_readgenbank_no_na.fasta")
+
+matr_ids_no_na_seqs_rentrez <- entrez_fetch(db = "nuccore", id = matr_ids_no_na, rettype = "fasta")
+write(x = matr_ids_no_na_seqs_rentrez, file = "sequences/matR_one_big_entrez_no_na.fasta")
+#### THIS SEQUENCE SHOWS ERROR AT END: 
+##Error: CEFetchPApplication::proxy_stream(): Failed to understand id: NA\nFailed to understand id: NA\nFailed to understand id: NA\n\n"
+matr_seqs_rentrez <- entrez_fetch(db = "nuccore", id = matr_ids, rettype = "fasta")
+write(x = matr_seqs_rentrez, file = "sequences/matR_one_big_entrez.fasta")
+
+
+matr_seqs <- read.GenBank(access.nb = matr_ids)
+write.FASTA(x = matr_seqs, file = "sequences/matR_one_big_test.fasta")
+
+class(atpb_seqs)
+test_gb_chr <- read.GenBank(test, as.character = TRUE)
+View(test_gb_chr)
+id_vector <- test # isolate unqiue ID vector for a single gene 
+sequences <- read.GenBank(id_vector, as.character = FALSE) # create a DNABin object for the gene, containing all sequences and their respective accession ID's
+sequences_GenBank_IDs <- paste(attr(sequences, "species"), names(sequences), sep = paste0(" | ", gene, "_")) #build a character vector with the species, GenBank accession numbers, and gene name to create more informative labels associated with each sequence in the FASTA file
+new_names <- updateLabel(sequences, old = names(sequences), new = sequences_GenBank_IDs) #replace accession IDs with the informative labels created above
+write.FASTA(x = new_names, file = paste0("data/genetic/sequences/all_small/", gene, "_all_small.fasta")
+write.FASTA
 # create function to gather sequences and write them to a FASTA file for each gene of interest using the unique ID dataframe created above
 write_fasta_func_all_small <- function(id_df){
   for (gene in colnames(id_df)){ # loop through each column (gene) in the dataframe 
