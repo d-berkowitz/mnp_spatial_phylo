@@ -45,16 +45,34 @@ na_gensp$Genus_Species <- sapply(na_gensp$Genus_Species, function(x) {
 ## bind the two dataframes back together
 bound <- rbind(not_na_gensp, na_gensp)
 
+##repeat to move Observation # to Observation column
+
+obs_num <- bound %>%
+  filter(is.na(Observation))
+
+obs <- bound %>%
+  filter(!is.na(Observation))
+
+
+#move Observation.. to Observation column
+obs_num$Observation <- paste(obs_num$Observation..)
+
+#bind two observation df together
+bound2 <- rbind(obs, obs_num)
+
 #Subset df to include only useful columns
-my_data_subset <- bound %>% 
+my_data_subset <- bound2 %>% 
                   select(Latitude, Longitude, 
-                         Genus_Species, Family, Cover_Class, Number)
+                         Genus_Species, Family, Cover_Class, 
+                         Number, Observation)
 
 #test Remove unknown from gen_sp to try and retain information on type of unknown
 my_data_subset$Genus_Species <- sapply(my_data_subset$Genus_Species, function(unknown_taxon) {
   gsub('Unknown', '', unknown_taxon)
 })
 
+# keep important info (grass, lichen, moss)
+#DO THIS LATER -db 05052020
 
 #specify reference databases to use
 sources <- c("EOL", "The International Plant Names Index", "ITIS")
@@ -96,44 +114,45 @@ dupl_remov <- pruned %>%
               distinct()
 
 #replace taxa, family NAs with unknowns to maintain data
-dupl_remov$Family <- as.character(dupl_remov$Family) # convert family column to character
+dupl_remov$Family <- as.character(dupl_remov$Family) # convert Family column to character
+dupl_remov$Observation <- as.character(dupl_remov$Observation) # convert Observation column to character
+
 dupl_remov <- dupl_remov %>%
   tidyr::replace_na(list(Genus_species = 'Unknown', Family = 'Unknown'))
+dupl_remov <- dupl_remov %>%
+  tidyr::replace_na(list(Observation = 'Unknown'))
 
-#remove observations where both taxa and family are unknown
-cleaned_sp_names <- dupl_remov[!(dupl_remov$Genus_species == 'Unknown' & dupl_remov$Family =='Unknown'),]
-
-#IDIOSYNCRATIC STEP, UNECCESSARY TO REPLICATE. replace all occurrences of 'Cylindropuntia bigelovii' with 
+#replace all occurrences of 'Cylindropuntia bigelovii' with 
 #'Cylindropuntia echinocarpa' and also 'Cylindropuntia californica' to 'Cylindropuntia acanthocarpa' 
 #'to rectify plant misidentification from data collection process
-cleaned_sp_names$Genus_species <- sapply(cleaned_sp_names$Genus_species, function(taxon) {
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
   gsub("Cylindropuntia bigelovii", "Cylindropuntia echinocarpa", taxon)
 })
 
-cleaned_sp_names$Genus_species <- sapply(cleaned_sp_names$Genus_species, function(taxon) {
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
   gsub("Cylindropuntia californica", "Cylindropuntia acanthocarpa", taxon)
 })
 
-cleaned_sp_names$Genus_species <- sapply(cleaned_sp_names$Genus_species, function(taxon) {
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
   gsub("Lepidium aschersonii", "Lepidium andersonii", taxon)
 })
 
-cleaned_sp_names$Genus_species <- sapply(cleaned_sp_names$Genus_species, function(taxon) {
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
   gsub("Bromus madritensis$", "Bromus madritensis ssp. rubens", taxon)
 })
 
-cleaned_sp_names$Genus_species <- sapply(cleaned_sp_names$Genus_species, function(taxon) {
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
   gsub("Echinocereus triglochidiatus.+", "Echinocereus triglochidiatus", taxon)
 })
 
 #write cleaned_species_names to .csv
-write.csv(cleaned_sp_names, file = "data/semiclean/clean_species_names.csv", row.names = FALSE)
 write.csv(dupl_remov, file = "data/semiclean/clean_species_names_with_unknowns.csv", row.names = FALSE)
+
 ###########STILL NEED TO REMOVE ALL SINGLE WORD TAXA FROM DATA (EXCEPT PECTOCARYA & UNKNOWN)
 
 
 #extract unique taxa names for use in Genbank query
-taxa_list <- cleaned_sp_names$Genus_species %>% sort() %>% unique()
+taxa_list <- dupl_remov$Genus_species %>% sort() %>% unique()
 taxa_list_df <- data.frame(taxa = taxa_list)
 #write taxa list to CSV, .txt files
 write.csv(taxa_list_df, file = "data/clean/taxa_list.csv", row.names = FALSE) # change path relevant to your directory organization
