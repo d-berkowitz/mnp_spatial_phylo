@@ -119,14 +119,26 @@ spatial_clean <- spatial_clean %>%
 
 #reorder columns 
 spatial_clean <- spatial_clean %>% select(
-  c('Latitude', 'Longitude', 'Genus_species', 'Family', 'Cover_Class', 'Number'))
+  c('Latitude', 'Longitude', 'Genus_species', 'Family', 'Cover_Class', 'Number', 'Observation'))
 
+# spatial_no_unk <- spatial_clean %>% filter(Genus_species != 'Unknown' &
+#                                              Family != 'Unknown')
+# 
+# unknown <- spatial_clean %>% filter(Genus_species == 'Unknown' &
+#                                       Family == 'Unknown')
+# nrow(unknown)
+# 
+# ten_seventeen <- spatial_clean %>% filter(grepl('MJV10-17.', Observation))
 
-#plot data
-spatial_clean %>% leaflet() %>% 
+#plot data to figure out what field season points are from
+
+leaflet() %>% 
   addProviderTiles(provider =  "Esri.WorldImagery") %>% 
-  addCircleMarkers(radius = 3, color = 'blue', opacity = 0.025, 
-                   weight = .05, label = spatial_clean$Genus_species)
+  addCircleMarkers(data = spatial_no_unk, radius = 3, color = 'blue', opacity = 0.025, 
+                   weight = .05, label = spatial_no_unk$Genus_species) %>%
+  addCircleMarkers(data = unknown, radius = 3, color = 'red', opacity = 0.025,
+                   weight = .05, label = unknown$Observation)
+
 ###############STOP HERE
 
 #convert dataframe to sf spatial dataframe object
