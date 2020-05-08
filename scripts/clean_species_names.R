@@ -71,9 +71,14 @@ my_data_subset$Genus_Species <- sapply(my_data_subset$Genus_Species, function(un
   gsub('Unknown', '', unknown_taxon)
 })
 
+#remove underscores
+my_data_subset$Genus_Species <- sapply(my_data_subset$Genus_Species, function(underscore) {
+  gsub('_', ' ', underscore)
+})
+
 # keep important info (grass, lichen, moss)
 #DO THIS LATER -db 05052020
-
+  
 #specify reference databases to use
 sources <- c("EOL", "The International Plant Names Index", "ITIS")
 
@@ -97,9 +102,8 @@ merged <- my_data_subset %>%
           left_join(resolved_distinct, by = c("Genus_Species" = "user_supplied_name")) 
 
 #rename matched_name2 to clean taxa to explicitly indicate column with cleaned taxa names
-merged <- merged %>% 
-          rename(clean_taxa = matched_name2)
-
+merged <- dplyr::rename(merged,
+                 clean_taxa = matched_name2)
 #remove original (erroneous) Genus_Species column, extraneous columns
 pruned <- subset(merged, select = -c(submitted_name, Genus_Species))
 
@@ -125,6 +129,17 @@ dupl_remov <- dupl_remov %>%
 #replace all occurrences of 'Cylindropuntia bigelovii' with 
 #'Cylindropuntia echinocarpa' and also 'Cylindropuntia californica' to 'Cylindropuntia acanthocarpa' 
 #'to rectify plant misidentification from data collection process
+
+#Opuntia bigelovii has been renamed to Cylindropuntia bigelovii
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Opuntia bigelovii", "Cylindropuntia echinocarpa", taxon)
+})
+
+#Opuntia ramosissima has been renamed to Cylindropuntia ramosissima
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Opuntia ramosissima", "Cylindropuntia ramosissima", taxon)
+})
+
 dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
   gsub("Cylindropuntia bigelovii", "Cylindropuntia echinocarpa", taxon)
 })
@@ -133,28 +148,154 @@ dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
   gsub("Cylindropuntia californica", "Cylindropuntia acanthocarpa", taxon)
 })
 
+#### fix typos and synonyms not caught by GNR step
 dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
-  gsub("Lepidium aschersonii", "Lepidium andersonii", taxon)
+  gsub("Cylindropuntia ramossissima", "Cylindropuntia ramosissima", taxon)
 })
 
 dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
-  gsub("Bromus madritensis$", "Bromus madritensis ssp. rubens", taxon)
+  gsub("Lepidium aschersonii", "Lepidium andersonii", taxon)
 })
 
 dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
   gsub("Echinocereus triglochidiatus.+", "Echinocereus triglochidiatus", taxon)
 })
 
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Cleomella arborea", "Peritoma arborea", taxon)
+})
+
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Camissonia boothii", "Eremothera boothii", taxon)
+})
+
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Castilleja angustifolia", "Castilleja chromosa", taxon)
+})
+
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Psorodendron californicum", "Phoradendron californicum", taxon)
+})
+
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Chamaesyce albomarginata", "Euphorbia albomarginata", taxon)
+})
+
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Cryptandra angustifolia", "Cryptantha angustifolia", taxon)
+})
+
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Cryptanthus angustifolius", "Cryptantha angustifolia", taxon)
+})
+
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Dryophytes", "Bryophyta", taxon)
+})
+
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Larra tridentata", "Larrea tridentata", taxon)
+})
+
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Anemopsis$", "Anemopsis californica", taxon)
+})
+
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Baccharis sarothroides", "Baccharis sergiloides", taxon)
+})
+
+
+#Lepidium andersonii isn't a real species
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Lepidium andersonii", "Unknown", taxon)
+})
+
+#Removing this species as CalFlora only lists one occurrence which is outside of the Mojave desert
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Dalea greggii", "Unknown", taxon)
+})
+
+#Removing this species as CalFlora lists occurrences which are in Northern California
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Hieracium nudicaule", "Unknown", taxon)
+})
+
+#Swapping out for Solidago Juliae for Ericameria paniculata as it was probably a mis-identification.
+#Solidago juliae isn't listed on CalFlora and therefore is assumed to not occur in California.
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Solidago juliae", "Ericameria paniculata", taxon)
+})
+
+#replace with GenBank synonym
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Dasyochloa pulchella", "Munroa pulchella", taxon)
+})
+
+#replace with GenBank synonym
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Peritoma arborea", "Cleomella arborea", taxon)
+})
+
+#Replacing Cryptantha angustifolia with Jonhstonella angustifolia, a synonym that is on GenBank
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Cryptantha angustifolia", "Johnstonella angustifolia", taxon)
+})
+
+#Replacing Acmispon maritimus with an older synonym, Lotus strigosus, which is on GenBank
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Acmispon maritimus", "Lotus strigosus", taxon)
+})
+
+##Remove all subspecies, varities #LATER REMOVE THIS STEP TO PRESERVE SSP INFO
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Bromus madritensis ssp. rubens", "Bromus madritensis", taxon)
+})
+
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Astragalus nuttallianus var. imperfectus", "Astragalus nuttallianus", taxon)
+})
+
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Senecio flaccidus var. monoensis", "Senecio flaccidus", taxon)
+})
+
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Eucrypta chrysanthemifolia var. bipinnatifida", "Eucrypta chrysanthemifolia", taxon)
+})
+
+####### Change this if time: Want to retain observations that have Family name in the 
+#######Genus_species column by changing the Genus_species to Unknown and Moving the Family over to Family
+####### Also: want to write a function that, for a Genus_species, if it has a Family that is not Unknown,
+####### Apply that family to all Genus_species of that kind. To have higher level taxonomic data !!
+
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Didymodon", "Unknown", taxon)
+})
+
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Lichens", "Unknown", taxon)
+})
+
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Bryoria", "Unknown", taxon)
+})
+
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Bryophyta", "Unknown", taxon)
+})
+###########COLLAPSE PECTOCARYA sp. INTO PECTOCARYA?
+dupl_remov$Genus_species <- sapply(dupl_remov$Genus_species, function(taxon) {
+  gsub("Pectocarya$", "Unknown", taxon)
+})
+
+#step to visually check the cleaned taxa list in a dataframe to make sure there are no errors
+check_taxa_list <- dupl_remov$Genus_species %>% sort() %>% unique()
+check_taxa_list_df <- data.frame(taxa_check = check_taxa_list)
+
+#rename to indicate end of clean species script
+clean_species_names <- dupl_remov
+
 #write cleaned_species_names to .csv
-write.csv(dupl_remov, file = "data/semiclean/clean_species_names_with_unknowns.csv", row.names = FALSE)
-
-###########STILL NEED TO REMOVE ALL SINGLE WORD TAXA FROM DATA (EXCEPT PECTOCARYA & UNKNOWN)
-
-
-#extract unique taxa names for use in Genbank query
-taxa_list <- dupl_remov$Genus_species %>% sort() %>% unique()
-taxa_list_df <- data.frame(taxa = taxa_list)
-#write taxa list to CSV, .txt files
-write.csv(taxa_list_df, file = "data/clean/taxa_list.csv", row.names = FALSE) # change path relevant to your directory organization
-write.table(taxa_list_df, file = "data/clean/taxa_list.txt", sep = " ", col.names = FALSE)
+write.csv(clean_species_names, file = "data/semiclean/clean_species_names.csv", row.names = FALSE)
 

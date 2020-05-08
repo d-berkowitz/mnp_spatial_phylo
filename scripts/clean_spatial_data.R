@@ -8,27 +8,21 @@ library(tidyverse)
 library(sf)
 library(mapview)
 library(leaflet)
+library(ggmap)
 
 # change to your project HOME directory
 setwd("/Users/deanberkowitz/Documents/mishler_lab/thesis/mnp_spatial_phylo/") 
 
 # set filepath
-path <- "data/semiclean/clean_species_names_with_unknowns.csv" # path to your data
+path <- "data/semiclean/clean_species_names.csv" # path to your data
 
-my_data <- read.csv(file = path)
-my_data
-
-#drop columns in Easting, Northing due to uncertainty about their origins. 
-#Will create Easting, Northing from Latitude and Longitude for all data points
-#to minimize error / assumptions about data since some have Easting/Northing and some don't.
-lat_long_only <- my_data 
-#%>% select(-c(Easting, Northing))
+raw_spatial_data <- read.csv(file = path)
 
 #create new df with lat, long in dms only to clean and prepare for conversion to dd
-dd_only <- lat_long_only %>% 
+dd_only <- raw_spatial_data %>% 
   filter(!grepl(pattern = c(' '), Latitude))
 
-dms_only <- lat_long_only %>% 
+dms_only <- raw_spatial_data %>% 
   filter(grepl(pattern = c(' '), Latitude))
 
 # remove ° symbol from longitudes (idiosyncracy of the data I am working with)
@@ -104,7 +98,7 @@ dms_only$Longitude_DD <- map_dbl(dms_only$Longitude, fix_longitude)
 # drop DMS latitude, longitude columns
 dms_now_dd <- dms_only %>% select(-c('Latitude', 'Longitude'))
 #rename latitude_DD, longitude_DD columns to prepare for merge
-dms_now_dd <- dms_now_dd %>% rename('Latitude' = 'Latitude_DD',
+dms_now_dd <- dms_now_dd %>% dplyr::rename('Latitude' = 'Latitude_DD',
                     'Longitude' = 'Longitude_DD')
 
 #remove decimal degree columns from dms_only df
@@ -116,33 +110,46 @@ spatial_clean <- rbind(dms_now_dd, dd_only)
 # filter out erroneous lat / long values that are outside region of interest
 spatial_clean <- spatial_clean %>%
   filter(Latitude <= 35.241)
+spatial_clean <- spatial_clean %>%
+  filter(Longitude < -115)
 
+nrow(spatial_clean)
+
+#remove duplicate species
+spatial_clean <- spatial_clean %>% distinct(Latitude, Longitude, Genus_species, .keep_all = TRUE)
+nrow(spatial_clean)
 #reorder columns 
 spatial_clean <- spatial_clean %>% select(
   c('Latitude', 'Longitude', 'Genus_species', 'Family', 'Cover_Class', 'Number', 'Observation'))
 
-# spatial_no_unk <- spatial_clean %>% filter(Genus_species != 'Unknown' &
-#                                              Family != 'Unknown')
-# 
-# unknown <- spatial_clean %>% filter(Genus_species == 'Unknown' &
-#                                       Family == 'Unknown')
-# nrow(unknown)
-# 
-# ten_seventeen <- spatial_clean %>% filter(grepl('MJV10-17.', Observation))
+
+spatial_clean_no_unk <- spatial_clean %>% filter(Genus_species != 'Unknown')
+nrow(spatial_clean_no_unk)
+unknown <- spatial_clean %>% filter(Genus_species == 'Unknown')
+nrow(unknown)
 
 #plot data to figure out what field season points are from
 
 leaflet() %>% 
   addProviderTiles(provider =  "Esri.WorldImagery") %>% 
-  addCircleMarkers(data = spatial_no_unk, radius = 3, color = 'blue', opacity = 0.025, 
-                   weight = .05, label = spatial_no_unk$Genus_species) %>%
-  addCircleMarkers(data = unknown, radius = 3, color = 'red', opacity = 0.025,
-                   weight = .05, label = unknown$Observation)
+  addCircleMarkers(data = spatial_clean_no_unk, radius = 3, color = 'blue', opacity = 0.025, 
+                   weight = .05, label = spatial_clean_no_unk$Genus_species) 
+# %>%
+#   addCircleMarkers(data = unknown, radius = 3, color = 'red', opacity = 0.025,
+#                    weight = .05, label = unknown$Genus_species)
+
+#extract unique taxa names for use in Genbank query
+clean_spatial_taxa_list <- spatial_clean_no_unk$Genus_species %>% sort() %>% unique()
+clean_spatial_taxa_list_df <- data.frame(taxa = clean_spatial_taxa_list)
+#write taxa list to CSV, .txt files
+write.csv(clean_spatial_taxa_list_df, file = "data/clean/clean_taxa_list.csv", row.names = FALSE) # change path relevant to your directory organization
+write.table(clean_spatial_taxa_list_df, file = "data/clean/clean_taxa_list.txt", sep = " ", col.names = FALSE)
+
 
 ###############STOP HERE
 
 #convert dataframe to sf spatial dataframe object
-sp_clean_sf <- st_as_sf(spatial_clean, coords = c('Longitude', 'Latitude'))
+sp_clean_sf <- st_as_sf(spatial_clean_no_unk, coords = c('Longitude', 'Latitude'))
 sp_clean_sf #inspect min, max lat longs to see if they make sense
 
 #project sf dataframe to UTM Zone 11N
@@ -150,6 +157,38 @@ sp_clean_utm <- sp_clean_sf %>%
   st_set_crs(4326) %>% #assume lat long to be WGS84
   st_transform(crs = 32611) #project data to WGS84 UTM zone 11N
 sp_clean_utm
+
+#write function to split geometry column into Easting, Northing
+sfc_as_cols <- function(x, names = c("x","y")) {
+  stopifnot(inherits(x,"sf") && inherits(sf::st_geometry(x),"sfc_POINT"))
+  ret <- sf::st_coordinates(x)
+  ret <- tibble::as_tibble(ret)
+  stopifnot(length(names) == ncol(ret))
+  x <- x[ , !names(x) %in% names]
+  ret <- setNames(ret,names)
+  dplyr::bind_cols(x,ret)
+}
+
+#split geometry column
+sp_clean_utm_biodiverse <- sfc_as_cols(sp_clean_utm, names = c("Easting", "Northing"))
+#convert to dataframe in format required for Biodiverse software
+sp_clean_utm_biodiverse_df <- sp_clean_utm_biodiverse %>% 
+                              as.data.frame() %>% 
+                              arrange(Genus_species) %>% 
+                              select(c('Genus_species', 'Easting', 'Northing'))
+#write spatial data csv for use in Biodiverse
+write.csv(sp_clean_utm_biodiverse_df, file = "data/clean/spatial/clean_spatial_utm_biodiverse.csv")
+
+
+### BROKEN CODE. IF TIME, PROJECT DATA INTO UTM ZONE 11N FOR LEAFLET AND BIODIVERSE
+# epsg_32611 <- leafletCRS(crsClass = "L.Proj.CRS", code = "EPSG:32611",
+#                   proj4def = "+proj=utm +zone=11 +datum=WGS84 +units=m +no_defs",
+#                   resolutions = 1.5^(25:15))
+# 
+# leaflet(options = leafletOptions(crs = epsg_32611)) %>% 
+#   addProviderTiles(provider =  "Esri.WorldImagery") %>% 
+#   addCircleMarkers(data = sp_clean_utm, radius = 3, color = 'blue', opacity = 0.025, 
+#                    weight = .05, label = sp_clean_utm$Genus_species) 
 
 
 
@@ -164,12 +203,6 @@ sp_clean_utm
 
 
 #############CLEAN SPATIAL DATA END
-
-#view data
-ggplot2::ggplot(spatial_clean, aes(x = Longitude, y = Latitude)) + geom_point() + 
-  theme(
-    axis.text.x = element_blank(),
-    axis.text.y = element_blank())
 
 ######summary statistics 
 

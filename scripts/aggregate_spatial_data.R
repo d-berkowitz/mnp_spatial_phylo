@@ -13,19 +13,19 @@ path <- "data/raw/spatial" # path to your raw data, if different organization th
 files <- list.files(path = path, full.names = T)
 
 # make a list of the files that are loaded
-tbl <- sapply(files, read_csv, simplify=FALSE) 
+my_tbl <- sapply(files, read_csv, simplify=FALSE) 
 
 # canonicalize column names so they properly join, remove erroneous/misspelled column names
-for (i in seq_along(tbl)){
-  colnames(tbl[[i]])[grep("Cover Class", colnames(tbl[[i]]))] <-"Cover_Class"
-  colnames(tbl[[i]])[grep("LAT", colnames(tbl[[i]]))] <-"Latitude"
-  colnames(tbl[[i]])[grep("LONG", colnames(tbl[[i]]))] <-"Longitude"
-  colnames(tbl[[i]])[grep("Genius_Species", colnames(tbl[[i]]))] <-"Genus_Species"
+for (i in seq_along(my_tbl)){
+  colnames(my_tbl[[i]])[grep("Cover Class", colnames(my_tbl[[i]]))] <-"Cover_Class"
+  colnames(my_tbl[[i]])[grep("LAT", colnames(my_tbl[[i]]))] <-"Latitude"
+  colnames(my_tbl[[i]])[grep("LONG", colnames(my_tbl[[i]]))] <-"Longitude"
+  colnames(my_tbl[[i]])[grep("Genius_Species", colnames(my_tbl[[i]]))] <-"Genus_Species"
   
 }
 
 # bind all data tables by column names
-bound <- bind_rows(lapply(tbl, function(dtt){mutate_all(dtt, as.character)}))
+bound <- bind_rows(lapply(my_tbl, function(dtt){mutate_all(dtt, as.character)}))
 
 # remove any fully duplicated rows
 my_data <- distinct(bound)
@@ -33,11 +33,9 @@ my_data <- distinct(bound)
 # view column names to find if any are duplicates that should be renamed before bind_rows() as above
 my_data %>% colnames() %>% sort()
 
-# pull out columns we're interested in:
-# "" "Easting", "Northing", Longitude", "Latitude", Genus_Species", "genus", "species", , "Cover_Class, "Number" 
-
+# pull out columns we're interested in
 spatial_data <- my_data %>% 
-  select(Easting, Northing, Latitude, Longitude, 
+  select(Latitude, Longitude, 
          Genus_Species, genus, species, Family, 
          Cover_Class, Number, Observation, `Observation #`)
 
