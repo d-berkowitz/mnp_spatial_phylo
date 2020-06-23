@@ -14,7 +14,7 @@ While these techniques are often applied at broader geographic scales to elucida
 
 To answer these questions, I developed a pipeline in R to clean and analyze species occurrence data constructed by the citizen-science nonprofit Blueprint Earth. From plant spatial data, I constructed a maximum likelihood community phylogeny using nine nuclear and plastid loci (ITS, atpb, trnK, trnL, matK, matR ndhF, rbcl) for the site's 99 identified vascular plant species. Genetic data was sourced from NCBI’s GenBank. I then used the software BIODIVERSE to generate a biodiversity heatmaps for the study region. The results of this study illuminate how environmental abiotic factors likely predict the diversity patterns of vascular plants in this region of the Mojave Desert. The results may be valuable to land managers and policy makers seeking to conserve dryland plant biodiversity. Furthermore, these findings contribute to a deeper understanding of the evolutionary relationships of Mojave vascular plants.
 
-#Contents
+# Contents
 This document details the functioning of the scripts constituting the data analysis pipeline I built. It also presents the results of the study, interpretations, and a discussion of further potential avenues for scientific exploration. 
 
 
