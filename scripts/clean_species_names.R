@@ -110,9 +110,6 @@ pruned <- subset(merged, select = -c(submitted_name, Genus_Species))
 #rename clean_taxa to Genus_species
 data.table::setnames(pruned, 'clean_taxa', 'Genus_species')
 
-#Remove var, ssp, subsp
-# pruned$clean_taxa <- str_replace_all(pruned$clean_taxa, pattern = c('var. |ssp. |subsp. '), replacement = '')
-
 #remove duplicate rows
 dupl_remov <- pruned %>% 
               distinct()

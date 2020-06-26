@@ -1,7 +1,7 @@
 #### mnp_spatial_phylo
 Repository containing the work done for my undergraduate honors thesis on the spatial phylogenetics of vascular plants in the Mojave National Preserve. 
 
-## Introduction
+## INTRODUCTION
 Biodiversity is essential for providing ecosystem services to humans and is important to conserve in the face of habitat loss and climate change. While major efforts have prioritized protecting biodiversity hotspots in recent years, desert biomes remain undervalued. Biodiversity is often quantified through analyzing a region's species richness, species evenness, and species turnover. However, these standard metrics fail to take into account the evolutionary history of the organisms in an area. Spatial phylogenetics is a recently developed approach that evaluates several phylogenetic metrics including phylogenetic diversity (PD) to evaluate topics such as spatial ecology, community phylogenetics, and conservation prioritization. 
 
 While these techniques are often applied at broader geographic scales to elucidate historical and evolutionary processes, I applied them at a very fine scale in a densely sampled region to explore ecological processes shaping community assemblage. In my research, I analyzed the spatial diversity patterns of vascular plants in the Mojave National Preserve in southern California. The field site is a 1km^2 plot in the Cane Spring region where Quaternary period basalt flows and perennial surface water availability characterize a hydrogeologically complex region. I tested the following hypotheses: 
@@ -14,7 +14,7 @@ While these techniques are often applied at broader geographic scales to elucida
 
 To answer these questions, I developed a pipeline in R to clean and analyze species occurrence data constructed by the citizen-science nonprofit Blueprint Earth. From plant spatial data, I constructed a maximum likelihood community phylogeny using nine nuclear and plastid loci (ITS, atpb, trnK, trnL, matK, matR ndhF, rbcl) for the site's 99 identified vascular plant species. Genetic data was sourced from NCBI’s GenBank. I then used the software BIODIVERSE to generate a biodiversity heatmaps for the study region. The results of this study illuminate how environmental abiotic factors likely predict the diversity patterns of vascular plants in this region of the Mojave Desert. The results may be valuable to land managers and policy makers seeking to conserve dryland plant biodiversity. Furthermore, these findings contribute to a deeper understanding of the evolutionary relationships of Mojave vascular plants.
 
-# Contents
+## CONTENTS
 This document details the functioning of the scripts constituting the data analysis pipeline I built. It also presents the results of the study, interpretations, and a discussion of further potential avenues for scientific exploration. 
 
 
@@ -51,12 +51,15 @@ Similar issues emerged when I attempted to query the Integrated Taxonomic Inform
 
 
 
-
 ### Clean spatial data (**clean_spatial_data.R**)
 All spatial data collected by Blueprint Earth were in Lat/Long, while some were also collected in Easting/Northing. Due to uncertainty about the origins of these UTM coordinates, only data in Latitude/Longitude format were used for the spatial cleaning. At the end, I used the ‘sf’ package to create a spatial points data frame, projecting the coordinates all at once into UTM Zone 11N. 
 
 As a result of inconsistencies in data collection methods used by Blueprint Earth across different field seasons, some data were collected in degree, minute, second format (DMS) while some data were collected in decimal degrees (DD). In order to rectify this, I split the data into two dataframes, one with DD data and one with DMS data, cleaned each for errors, converted the DMS to DD, and then merged the dataframes back together. (3,964 points) Lastly, I filtered the final dataframe to remove points whose Genus_species were unknown, in order to prepare for phylogenetic and diversity analyses. This left me with with 3,382 clean data points, more than double that of what I had available for my poster at Botany 2019 (1,455 clean data points).The clean spatial data frame was used to create a final list of 99 species to be queried for genetic data on NCBI’s GenBank. 
 
+<p align="center">
+  <img src= "figures_0625/spatial_data_points.png" style="width:375px;" title="All species known (3,382 points)">
+  <img src= "figures_0625/spatial_clean_with_unknown_05062020.png" style="width:350px;" title="Red dots are unknown species (582) overlayed on known species">
+</p>
 
 
 ### Aggregate genetic data (**get_fasta_files.R**)
@@ -78,3 +81,103 @@ _Solidago juliae_ - Not native to California, not present on CalFlora. Very like
 ### Align genetic data (**align_sequences.R**)
 This script takes in a directory containing individual FASTA files for each gene of interest. It iterates through the files in the directory, aligning each of them and saving the outputs to a new directory titled ‘alignments’.
 
+## RESULTS
+Summary statistics:
+149 grid cells (35m x 35m) -> 36.6% of study area sampled.
+3,382 points for 99 species across 28 botanical families.
+
+
+### Community phylogeny
+A maximum likelihood community phylogeny was constructed through RAxML accessed through the UC San Diego supercomputer server CIPRES. Branch lengths indicate number of nucleotide substitutions, where longer branches are more genetically unique and shorter branches indicate species that are less genetically unique. The tree was rooted around Notholaena californica, a fern which represents the outgroup as the most distant relative from all of the other species, which are all angiosperms except for Ephedra viridis, which is a gymnosperm.
+
+<p align="center">
+  <img src= "figures_0625/phylogeny_git_0626.png" style="width:650px;">
+</p>
+
+
+### Species Richness
+The heatmap of species richness illustrates the greatest diversity of taxa in the center of the sampled area. Species richness cell values indicate the total number of species that occurs within that area. Further analyses must be conducted in order to understand why this is. Preliminary hypothesis is that transition zones between geologic types along slope gradients close to available surface water will host more diversity than other sites.
+
+<p align="center">
+  <img src= "figures_0625/richness_git_0626.png" style="width:500px;">
+</p>
+
+### Phylogenetic Diversity (PD)
+The heatmap of PD indicates similar diversity patterns to that of species richness, with slight variation. The value of each grid cell represents the proportion of the sum total branch lengths of the phylogenetic tree that is represented by all species in that area.
+
+<p align="center">
+  <img src= "figures_0625/pd_git_0626.png" style="width:500px;">
+</p>
+
+### Significance tests
+In order to test the null hypothesis (ie: determine the degree to which PD differs than expected based on species richness alone), I plotted a least squares linear regression of PD on Species richness. The R^2 correlation coefficient value of 0.87 indicates that this variation demonstrates nonrandom assemblage pattern of diversity in the study area.
+
+<p align="center">
+  <img src= "figures_0625/PD_richness_regression.png" style="width:400px;">
+</p>
+
+A two-tailed spatial randomization test was conducted to determine the exact regions where PD is significantly lower or higher than expected based on species richness. This test randomly shuffles without replacement, over 1000 iterations, the list of species present in the study area into the grid cells while keeping the number of species per grid cell constant as well as the total range size (ie: number of grid cells for each species) constant. The significant PD heatmap indicates cooler regions of phylogenetic clustering (species are more closely related to one another than expected) and warmer regions of phylogenetic overdispersion (species are less closely related to one another than expected). 
+
+<p align="center">
+  <img src= "figures_0625/sigpd_git_0626.png" style="width:500px;">
+</p>
+
+PD clustering could be due to environmental selection for phenotypic traits that confer higher fitness, assuming these traits have phylogenetic signal. PD overdispersion could indicated regions with higher habitat heterogeneity and thus niche differentiation, or areas where interspecific competition has driven trait specialization. Further data (environmental data, genetic data for functional traits) is needed to understand these patterns.
+Evenness
+
+<p align="center">
+  <img src= "figures_0625/uneven_abundance_0514.png" style="width:400px;">
+</p>
+
+
+A bar plot of species abundances indicate skewed distribution of taxa across landscape, where the majority of species are relatively uncommon, while there are a few species which are very common. Each bar represents a single species, with 99 bars total. The top 10 most abundant species (~10% of the total species) represent over 56% of the plant occurrences. This skewed abundance distribution is a normal phenomenon in ecology, and expected in a desert ecosystem which is fairly sparsely vegetated (probably an adaptation to reduce fire under extremely hot and dry conditions). 
+
+<p align="center">
+  <img src= "figures_0625/most_abundant_species.png" style="width:500px;">
+</p>
+
+However, the fact that the most abundant species, Bromus madritensis, an invasive annual grass, occurs more than 3x as frequently as the second most abundant species, is problematic for several reasons. Firstly, it means that this species is outcompeting native annuals, evidence by how prolific it is. Secondly, this species’ success has significant downstream implications for the ecosystem as its density leads to higher frequency of fires. Under various climate change scenarios, the weather patterns will become more extreme, with hotter summers and wetter winters, leading to more intense fire events. Furthermore, this grass is one of the most common species to appear post-fire, so its presence induces a positive feedback loop with negative ramifications for the Mojave ecosystem.
+
+<p align="center">
+  <img src= "figures_0625/red_brome_occurrence.png" style="width:350px;">
+</p>
+
+
+
+Map illustrating distribution of Bromus madritensis across study area, where black dots indicate grid cells that this species occurs in. Bromus madritensis occurs in 80% of sampled area (119 of 149 grid cells). But interestingly, it doesn’t occur in the center, which has the highest diversity. 
+
+
+
+
+
+## NEXT STEPS
+
+Write guidelines for Blueprint Earth data collection methods.
+Based on the analyses conducted thus far, it would be helpful to inform Blueprint Earth of ideal vegetation data collection methods moving forwards to ensure high quality data. Unfortunately, due to discrepancies in data collection methods across field seasons, as well as the degree of human error introduced in the analogue collection and digitization process, a large number of data points were ultimately thrown out in the data cleaning process. 
+
+Guidelines:
+
+**1. Collect all spatial data in Lat/Long format**
+
+**2. Use Esri’s Collector app to streamline data collection process, removing the step of digitizing, which saves time and also reduces human error.**
+
+**3. Store data in SQL relational database or another format that is not just a collection of CSVs**
+
+**4. Perform functional ecological trait analysis.**
+
+Identify certain genes that are associated with functional ecological traits (ex: Nitrogen fixing). Query GenBank for those genes and build a new phylogeny, illustrating derivation of these traits and grouping descendants accordingly. Perform spatial analysis to determine if there are any statistically significant patterns of clustering or dispersal along the landscape. Interpret patterns and develop hypotheses for why these are occurring.
+
+**5. Perform phenological analysis.**
+Determine spatial distribution patterns between and within annuals, perennials. In Mojave Desert, annuals are mostly active in the winter and spring and use the C3 photosynthetic pathway. Are there any variations in this pattern across the study site? Are most annuals C3, or are some C4? What are the factors impacting seasonal growth of annuals across the study site? How do these general patterns shift during super bloom events? What is the temporal relationship of ENSO cycles with superblooms? Are there patterns of certain plants that grow next to shrubs like Larrea tridentata? Or are there any species that stand out as nitrogen fixers / shade providers which are dominant / important in the ecosystem for other species that require shade?
+
+*Phenological analysis would be conducted in conjunction with functional trait analysis.*
+
+**6. Employ UAV-based remote sensing techniques to analyze environmental variables driving plant diversity patterns.**
+
+Fly a drone over study site to collect high resolution RGB imagery, high resolution Digital Terrain Model (DTM). Build a hydrological model from DTM, create land cover data from RGB orthomosaic. Employ statistical spatial analysis to determine relationships between explanatory environmental variables and dependent diversity patterns.
+
+**7. Conduct more vascular plant surveys to fill in gaps in genetic data for species.**
+Many species in the study area do not have genetic data available on GenBank. In order to incorporate these taxa into the phylogenetic analyses, specimens need to be identified and collected, both for DNA extraction as well as plant press specimens to be deposited at the UC Jepson Herbarium. 
+
+**8. Automate all analyses.**
+Write more scripts to conduct all analyses in an automated, reproducible fashion. Use BIODIVERSE R pipeline instead of graphical user interface (GUI). Find R package for creating supermatrix instead of using Sequence Matrix. Use command line RAxML for constructing maximum likelihood phylogeny as opposed to CIPRES server.

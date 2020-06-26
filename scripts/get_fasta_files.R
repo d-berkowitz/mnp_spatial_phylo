@@ -34,7 +34,8 @@ for (gene in colnames(term_df)) {
   term_df[[gene]] <- map2(taxa_list$taxa, gene, create_term)
 }
 
-# write function to get GenBank IDs based on desired criteria. This function only gets IDs for sequences that are
+# write function to get GenBank IDs based on desired criteria. 
+# This function only gets IDs for sequences that are
 # less than 10,000 base pairs long in order for alignment to work.
 get_max_ID_all_small <- function(term){
   search <- entrez_search(db = "nuccore", term = term, retmax = 25)
@@ -76,6 +77,16 @@ write.csv(result_all_small, file = "data/genetic/ids/accession_ids_all_small.csv
 
 #read in dataframe containing IDs for sequences < 10,000 base pairs
 all_small_id <- read.csv('data/genetic/ids/accession_ids_all_small.csv')
+# colnames(all_small_id)
+# test_na_rowwise <-rowSums(is.na(all_small_id))
+# test_na_rowwise %>%
+#   group_by(V1) %>%
+#   summarise(num_taxa_missing_data = sum())
+#   mutate(num_missing_genes = select(., internal.transcribed.spacer:rbcL %>% rowSums(is.na()))) 
+# na_count <-sapply(all_small_id, function(y) sum(length(which(is.na(y)))))
+# na_count <- data.frame(na_count)
+# na_count %>%
+#   mutate(percent_missing_data = (na_count/99) * 100)
 
 # get list of species for which no genetic data was available
 taxa_no_genes <- all_small_id %>% 

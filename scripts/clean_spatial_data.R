@@ -9,7 +9,9 @@ library(sf)
 library(mapview)
 library(leaflet)
 library(ggmap)
-
+library(rgdal)
+library(raster)
+library(ggplot2)
 # change to your project HOME directory
 setwd("/Users/deanberkowitz/Documents/mishler_lab/thesis/mnp_spatial_phylo/") 
 
@@ -96,13 +98,13 @@ dms_only$Latitude_DD <- map_dbl(dms_only$Latitude, fix_latitude)
 dms_only$Longitude_DD <- map_dbl(dms_only$Longitude, fix_longitude)
 
 # drop DMS latitude, longitude columns
-dms_now_dd <- dms_only %>% select(-c('Latitude', 'Longitude'))
+dms_now_dd <- dms_only %>% dplyr::select(-c('Latitude', 'Longitude'))
 #rename latitude_DD, longitude_DD columns to prepare for merge
 dms_now_dd <- dms_now_dd %>% dplyr::rename('Latitude' = 'Latitude_DD',
                     'Longitude' = 'Longitude_DD')
 
 #remove decimal degree columns from dms_only df
-dms_only <- dms_only %>% select(-c('Latitude_DD', 'Longitude_DD'))
+dms_only <- dms_only %>% dplyr::select(-c('Latitude_DD', 'Longitude_DD'))
 
 #merge spatial dataframes back together
 spatial_clean <- rbind(dms_now_dd, dd_only)
@@ -119,7 +121,7 @@ nrow(spatial_clean)
 spatial_clean <- spatial_clean %>% distinct(Latitude, Longitude, Genus_species, .keep_all = TRUE)
 nrow(spatial_clean)
 #reorder columns 
-spatial_clean <- spatial_clean %>% select(
+spatial_clean <- spatial_clean %>% dplyr::select(
   c('Latitude', 'Longitude', 'Genus_species', 'Family', 'Cover_Class', 'Number', 'Observation'))
 
 
@@ -175,24 +177,217 @@ sp_clean_utm_biodiverse <- sfc_as_cols(sp_clean_utm, names = c("Easting", "North
 sp_clean_utm_biodiverse_df <- sp_clean_utm_biodiverse %>% 
                               as.data.frame() %>% 
                               arrange(Genus_species) %>% 
-                              select(c('Genus_species', 'Easting', 'Northing'))
+                              dplyr::select(c('Genus_species', 'Easting', 'Northing'))
 #write spatial data csv for use in Biodiverse
 write.csv(sp_clean_utm_biodiverse_df, file = "data/clean/spatial/clean_spatial_utm_biodiverse.csv")
 
 
-### BROKEN CODE. IF TIME, PROJECT DATA INTO UTM ZONE 11N FOR LEAFLET AND BIODIVERSE
-# epsg_32611 <- leafletCRS(crsClass = "L.Proj.CRS", code = "EPSG:32611",
-#                   proj4def = "+proj=utm +zone=11 +datum=WGS84 +units=m +no_defs",
-#                   resolutions = 1.5^(25:15))
-# 
-# leaflet(options = leafletOptions(crs = epsg_32611)) %>% 
-#   addProviderTiles(provider =  "Esri.WorldImagery") %>% 
-#   addCircleMarkers(data = sp_clean_utm, radius = 3, color = 'blue', opacity = 0.025, 
-#                    weight = .05, label = sp_clean_utm$Genus_species) 
+##Spatial analysis
+
+species_data <- sp_clean_utm_biodiverse %>%
+  as.data.frame() %>%
+  arrange(Genus_species) %>%
+  dplyr::select(c('Genus_species', 'Easting', 'Northing'))
 
 
 
+#######GET FAMILY INFORMATION
 
+library(myTAI)
+library(furrr)
+
+get_fam <- function(sp){
+            taxonomy(organism = sp, 
+            db = "itis", output = "classification") %>%
+            filter(rank == 'family') %>%
+            dplyr::select('name') %>%
+            pull()
+}
+
+sp_df <- species_data %>%
+  dplyr::select('Genus_species') %>%
+  distinct() %>% 
+  filter(Genus_species != 'Castilleja chromosa') %>%
+  filter(Genus_species != 'Cleomella arborea') %>%
+  filter(Genus_species != 'Johnstonella angustifolia') %>%
+  filter(Genus_species != 'Lotus strigosus') %>%
+  filter(Genus_species != 'Munroa pulchella') %>%
+  filter(Genus_species != 'Scutellaria mexicana') %>%
+  filter(Genus_species != 'Stipa hymenoides')
+
+
+plan(multiprocess)
+sp_df$Family <- future_map_chr(sp_df$Genus_species, get_fam)
+              
+syn_error_sp <- c('Castilleja chromosa', 'Cleomella arborea', 'Johnstonella angustifolia',
+               'Lotus strigosus', 'Munroa pulchella', 'Scutellaria mexicana',
+               'Stipa hymenoides')
+
+syn_error_fam <- c('Orobanchaceae', 'Cleomaceae', 'Boraginaceae',
+                   'Fabaceae', 'Poaceae', 'Lamiaceae',
+                   'Poaceae')
+
+syn_error_df <- data.frame('Genus_species' = syn_error_sp,
+                           'Family' = syn_error_fam)
+
+sp_df_bound <- rbind(sp_df, syn_error_df) %>%
+  arrange(Genus_species)
+
+species_data <- left_join(species_data, sp_df_bound, by = 'Genus_species')
+
+abundance <- species_data %>% 
+  group_by(Genus_species) %>%
+  summarise(Abundance = n()) %>%
+  arrange(desc(Abundance))
+
+abundance$Rank <- as.numeric(as.factor(abundance$Abundance))
+
+abundance %>% merge(abundance %>% group_by(Rank) %>% summarise(dens = n())) -> abundance
+
+top20 <- abundance %>% filter(Rank > 33)
+top20$Abundance %>% sum() / sum(abundance$Abundance)
+############### MAKE FIGURES
+
+library(wesanderson)
+library(RColorBrewer)
+library(extrafont)
+library(viridis)
+
+
+join_test <- join_test %>% arrange(Abundance) 
+#run together
+set.seed(8)
+
+ggplot(join_test, aes(x = reorder(Genus_species, -Abundance))) + 
+geom_bar(stat = "count")
+
+
+
+#run together
+set.seed(8)
+ggplot(abundance, aes(x = (Rank), y = Abundance)) + 
+  geom_jitter(height = 0.2, width = 0.5,
+              alpha = 0.2) + 
+  labs(x = "Species rank (from least to most abundant)", 
+       y = "Log abundance (# of individuals)",
+       size = "# of species that share rank") +
+  guides(size = guide_legend(override.aes = list(size = c(1, 2, 3, 4))))+
+  ggtitle("Unevenness of taxa abundance across study area") +
+  geom_vline(xintercept = 32.375, color = "red", size = .5) +
+  scale_y_continuous(
+    trans = "log10",
+    breaks = c(1, 10, 50, 100, 600)) + 
+  scale_size(range = c(.75, 3)) + 
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+                            panel.background = element_blank(), 
+        axis.line = element_line(colour = "black"),
+        text = element_text(size = 12, family = "Times New Roman")) 
+
+
+#plot families of 10 most abundant taxa by rank
+abund_10 <- abundance %>% head(10)
+
+family_abundance <- species_data %>% 
+  group_by(Family) %>%
+  summarise(abundance = n()) %>%
+  arrange(desc(abundance))
+
+family_num_taxa <- species_data %>% 
+  dplyr::select('Genus_species', 'Family') %>%
+  distinct() %>%
+  group_by(Family) %>%
+  summarise(num_taxa = n()) %>%
+  arrange(desc(num_taxa))
+
+family_stats <- left_join(family_abundance, family_num_taxa, by = 'Family') %>%
+  dplyr::rename(num_sp = num_taxa) %>%
+  dplyr::rename(fam_abundance = abundance)
+
+
+sp_fam <- species_data %>% 
+  dplyr::select('Genus_species', 'Family') %>%
+  distinct()
+
+
+
+font_import()
+fonts()
+
+abundance$Family < factor(abundance$Family, levels = abundance$Rank)
+abundance$Abundance %>% class()
+
+
+#Plot species evenness
+abundance %>% arrange(desc(Abundance)) %>%
+  ggplot(aes(x= reorder(Genus_species, -Abundance), y= Abundance)) +
+  geom_col() +
+  theme_minimal(base_family = "Times New Roman") +
+  theme(axis.text.x=element_blank(),
+        axis.ticks.x=element_blank()) +
+  labs(x = 'Species', y = 'Abundance (# of individuals',
+       title = 'Uneven Species Abundance') 
+
+#Most abundant species in study area
+abundance %>% arrange(desc(Abundance)) %>% head(6) %>%
+  ggplot(aes(x = reorder(Genus_species, -Abundance), y = Abundance)) +
+  geom_col(aes(fill = reorder(Family, Abundance)),
+           colour = "black",
+           size = 0.2) +
+  scale_fill_brewer(palette = "YlOrRd") + 
+  guides(fill = guide_legend(reverse = TRUE)) + 
+  theme_minimal(base_family = "Times New Roman") + 
+  labs(y = "# of individuals", x = "Genus species",
+       fill = "Family") +
+  theme(axis.text.y = element_text(face = "italic"),
+        axis.text.x = element_text(angle = 40, hjust = 1, vjust = 1)) +
+  ggtitle("Most Abundant Species")
+
+bluecols <- brewer.pal(6, 'Blues')
+
+#Diversity of families associated with most abundance
+family_stats %>% arrange(desc(fam_abundance)) %>% head(6) %>%
+  ggplot(aes(x = reorder(Family, -fam_abundance), y = fam_abundance)) + 
+  geom_col(aes(fill = reorder(Family, fam_abundance)),
+           colour = "black",
+           size = 0.2) +
+  scale_fill_brewer(palette = "Blues") + 
+  theme_minimal(base_family = "Times New Roman") + 
+  labs(y = "total # of individuals", x = "Family") +
+  theme(axis.text.x = element_text(angle = 40, hjust = 1, vjust = 1)) + 
+  ggtitle("Most Abundant Families") +
+  theme(legend.position = "none")
+
+
+  
+
+merged_for_facet <- left_join(abundance, family_stats, by = 'Family')
+
+#plot species + families
+ggplot(merged_for_facet, aes(x = Abundance, y = Genus_))
+
+#plot most abundant families
+family_stats %>% arrange(desc(num_sp)) %>% head(6) %>%
+  ggplot(aes(y = Family, x = abundance)) + 
+  geom_col(fill = family_stats$num_sp)
+
+
+
+# log normal distribution of species abundance preston
+hist(abundance$Abundance, breaks = c(1, 2, 5, 50, 100, 700))
+
+min(abundance$Abundance)
+# log_plot <- ggplot(abundance, aes(x = Rank, y = Abundance)) + 
+#   geom_point() + 
+#   geom_line()
+
+st_read("shapefile/35m_richness.shp")
+
+richness <- raster(x = '35m_richness.tif')
+values(richness)
+plot(richness)
+richness_utm <- richness %>%
+                st_set_crs(4326) %>% 
+                st_transform(crs = 32611)
 #do.call(st_geometry(dd_only_utm), dd_only_utm$Genus_species) %>% as_tibble() %>% setNames(c('east', 'north'))
 #test_df <- as.data.frame(dd_only_utm)
 #test_df$geometry
