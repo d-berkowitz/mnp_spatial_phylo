@@ -57,8 +57,11 @@ All spatial data collected by Blueprint Earth were in Lat/Long, while some were 
 As a result of inconsistencies in data collection methods used by Blueprint Earth across different field seasons, some data were collected in degree, minute, second format (DMS) while some data were collected in decimal degrees (DD). In order to rectify this, I split the data into two dataframes, one with DD data and one with DMS data, cleaned each for errors, converted the DMS to DD, and then merged the dataframes back together. (3,964 points) Lastly, I filtered the final dataframe to remove points whose Genus_species were unknown, in order to prepare for phylogenetic and diversity analyses. This left me with with 3,382 clean data points, more than double that of what I had available for my poster at Botany 2019 (1,455 clean data points).The clean spatial data frame was used to create a final list of 99 species to be queried for genetic data on NCBI’s GenBank. 
 
 <p align="center">
-  <img src= "figures_0625/spatial_data_points.png" style="width:300px;" title="All species known (3,382 points)">
-  <img src= "figures_0625/spatial_clean_with_unknown_05062020.png" style="width:300px;" title="Red dots are unknown species (582) overlayed on known species">
+  <img src= "figures_0625/spatial_data_points.png" style="width:300px;">
+</p>
+
+<p align="center">
+  <img src= "figures_0625/spatial_clean_with_unknown_05062020.png" style="width:300px;">
 </p>
 
 
