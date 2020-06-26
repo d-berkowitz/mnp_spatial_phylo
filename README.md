@@ -1,5 +1,5 @@
 #### mnp_spatial_phylo
-Repository containing the work done for my undergraduate honors thesis on the spatial phylogenetics of vascular plants in the Mojave National Preserve. 
+Repository containing the work done for my UC Berkeley undergraduate honors thesis in Physical Geography on the spatial phylogenetics of vascular plants in the Mojave National Preserve. 
 
 ## INTRODUCTION
 Biodiversity is essential for providing ecosystem services to humans and is important to conserve in the face of habitat loss and climate change. While major efforts have prioritized protecting biodiversity hotspots in recent years, desert biomes remain undervalued. Biodiversity is often quantified through analyzing a region's species richness, species evenness, and species turnover. However, these standard metrics fail to take into account the evolutionary history of the organisms in an area. Spatial phylogenetics is a recently developed approach that evaluates several phylogenetic metrics including phylogenetic diversity (PD) to evaluate topics such as spatial ecology, community phylogenetics, and conservation prioritization. 
