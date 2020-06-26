@@ -57,8 +57,8 @@ All spatial data collected by Blueprint Earth were in Lat/Long, while some were 
 As a result of inconsistencies in data collection methods used by Blueprint Earth across different field seasons, some data were collected in degree, minute, second format (DMS) while some data were collected in decimal degrees (DD). In order to rectify this, I split the data into two dataframes, one with DD data and one with DMS data, cleaned each for errors, converted the DMS to DD, and then merged the dataframes back together. (3,964 points) Lastly, I filtered the final dataframe to remove points whose Genus_species were unknown, in order to prepare for phylogenetic and diversity analyses. This left me with with 3,382 clean data points, more than double that of what I had available for my poster at Botany 2019 (1,455 clean data points).The clean spatial data frame was used to create a final list of 99 species to be queried for genetic data on NCBI’s GenBank. 
 
 <p align="center">
-  <img src= "figures_0625/spatial_data_points.png" style="width:375px;" title="All species known (3,382 points)">
-  <img src= "figures_0625/spatial_clean_with_unknown_05062020.png" style="width:350px;" title="Red dots are unknown species (582) overlayed on known species">
+  <img src= "figures_0625/spatial_data_points.png" style="width:300px;" title="All species known (3,382 points)">
+  <img src= "figures_0625/spatial_clean_with_unknown_05062020.png" style="width:300px;" title="Red dots are unknown species (582) overlayed on known species">
 </p>
 
 
@@ -91,7 +91,7 @@ Summary statistics:
 A maximum likelihood community phylogeny was constructed through RAxML accessed through the UC San Diego supercomputer server CIPRES. Branch lengths indicate number of nucleotide substitutions, where longer branches are more genetically unique and shorter branches indicate species that are less genetically unique. The tree was rooted around Notholaena californica, a fern which represents the outgroup as the most distant relative from all of the other species, which are all angiosperms except for Ephedra viridis, which is a gymnosperm.
 
 <p align="center">
-  <img src= "figures_0625/phylogeny_git_0626.png" style="width:650px;">
+  <img src= "figures_0625/phylogeny_git_0626.png" style="width:450px;">
 </p>
 
 
@@ -99,14 +99,14 @@ A maximum likelihood community phylogeny was constructed through RAxML accessed 
 The heatmap of species richness illustrates the greatest diversity of taxa in the center of the sampled area. Species richness cell values indicate the total number of species that occurs within that area. Further analyses must be conducted in order to understand why this is. Preliminary hypothesis is that transition zones between geologic types along slope gradients close to available surface water will host more diversity than other sites.
 
 <p align="center">
-  <img src= "figures_0625/richness_git_0626.png" style="width:500px;">
+  <img src= "figures_0625/richness_git_0626.png" style="width:400px;">
 </p>
 
 ### Phylogenetic Diversity (PD)
 The heatmap of PD indicates similar diversity patterns to that of species richness, with slight variation. The value of each grid cell represents the proportion of the sum total branch lengths of the phylogenetic tree that is represented by all species in that area.
 
 <p align="center">
-  <img src= "figures_0625/pd_git_0626.png" style="width:500px;">
+  <img src= "figures_0625/pd_git_0626.png" style="width:400px;">
 </p>
 
 ### Significance tests
@@ -119,7 +119,7 @@ In order to test the null hypothesis (ie: determine the degree to which PD diffe
 A two-tailed spatial randomization test was conducted to determine the exact regions where PD is significantly lower or higher than expected based on species richness. This test randomly shuffles without replacement, over 1000 iterations, the list of species present in the study area into the grid cells while keeping the number of species per grid cell constant as well as the total range size (ie: number of grid cells for each species) constant. The significant PD heatmap indicates cooler regions of phylogenetic clustering (species are more closely related to one another than expected) and warmer regions of phylogenetic overdispersion (species are less closely related to one another than expected). 
 
 <p align="center">
-  <img src= "figures_0625/sigpd_git_0626.png" style="width:500px;">
+  <img src= "figures_0625/sigpd_git_0626.png" style="width:400px;">
 </p>
 
 PD clustering could be due to environmental selection for phenotypic traits that confer higher fitness, assuming these traits have phylogenetic signal. PD overdispersion could indicated regions with higher habitat heterogeneity and thus niche differentiation, or areas where interspecific competition has driven trait specialization. Further data (environmental data, genetic data for functional traits) is needed to understand these patterns.
@@ -133,13 +133,13 @@ Evenness
 A bar plot of species abundances indicate skewed distribution of taxa across landscape, where the majority of species are relatively uncommon, while there are a few species which are very common. Each bar represents a single species, with 99 bars total. The top 10 most abundant species (~10% of the total species) represent over 56% of the plant occurrences. This skewed abundance distribution is a normal phenomenon in ecology, and expected in a desert ecosystem which is fairly sparsely vegetated (probably an adaptation to reduce fire under extremely hot and dry conditions). 
 
 <p align="center">
-  <img src= "figures_0625/most_abundant_species.png" style="width:500px;">
+  <img src= "figures_0625/most_abundant_species.png" style="width:450px;">
 </p>
 
 However, the fact that the most abundant species, Bromus madritensis, an invasive annual grass, occurs more than 3x as frequently as the second most abundant species, is problematic for several reasons. Firstly, it means that this species is outcompeting native annuals, evidence by how prolific it is. Secondly, this species’ success has significant downstream implications for the ecosystem as its density leads to higher frequency of fires. Under various climate change scenarios, the weather patterns will become more extreme, with hotter summers and wetter winters, leading to more intense fire events. Furthermore, this grass is one of the most common species to appear post-fire, so its presence induces a positive feedback loop with negative ramifications for the Mojave ecosystem.
 
 <p align="center">
-  <img src= "figures_0625/red_brome_occurrence.png" style="width:350px;">
+  <img src= "figures_0625/red_brome_occurrence.png" style="width:300px;">
 </p>
 
 
